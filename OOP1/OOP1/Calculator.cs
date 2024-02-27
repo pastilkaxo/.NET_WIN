@@ -159,6 +159,21 @@ namespace OOP1
             textBox1.ReadOnly = true;
             try
             {
+                if(textBox1.Text != string.Empty)
+                {
+                    button1.Enabled = true;
+                    button2.Enabled = true;
+                    button3.Enabled = true;
+                    button4.Enabled = true;
+                }
+                else
+                {
+                    button1.Enabled = false;
+                    button2.Enabled = false;
+                    button3.Enabled = false;
+                    button4.Enabled = false;
+                }
+
 
                 if (checkBox4.Checked)
                 {
@@ -248,9 +263,9 @@ namespace OOP1
                         {
                            
                             int hex = Convert.ToInt32(textBox1.Text);
-                            string bin = Convert.ToString(hex, 2);
-                            string oct = Convert.ToString(hex, 8);
-                            string dec = Convert.ToString(hex, 10);
+                            string bin = Convert.ToString(Convert.ToInt32(textBox1.Text, 16), 2);
+                            string oct = Convert.ToString(Convert.ToInt32(textBox1.Text, 16), 8);
+                            string dec = Convert.ToString(Convert.ToInt32(textBox1.Text, 16), 10);
                             textBox3.Text = dec;
                             textBox4.Text = oct;
                             textBox5.Text = bin;
@@ -296,12 +311,11 @@ namespace OOP1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            a = int.Parse(textBox1.Text);
-            textBox1.Clear();
-            count = 1;
-            label1.Text = a.ToString()+ " AND ";
-            znak = true;
-
+                a = int.Parse(textBox1.Text);
+                textBox1.Clear();
+                count = 1;
+                label1.Text = a.ToString() + " AND ";
+                znak = true;
         }
 
 

@@ -65,6 +65,7 @@ namespace OOP1
             this.textBox1.Location = new System.Drawing.Point(15, 12);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
             this.textBox1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.textBox1.Size = new System.Drawing.Size(464, 35);
             this.textBox1.TabIndex = 20;
@@ -419,6 +420,7 @@ namespace OOP1
             this.textBox5.Location = new System.Drawing.Point(311, 35);
             this.textBox5.Multiline = true;
             this.textBox5.Name = "textBox5";
+            this.textBox5.ReadOnly = true;
             this.textBox5.Size = new System.Drawing.Size(64, 50);
             this.textBox5.TabIndex = 31;
             this.textBox5.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
@@ -428,6 +430,7 @@ namespace OOP1
             this.textBox4.Location = new System.Drawing.Point(241, 35);
             this.textBox4.Multiline = true;
             this.textBox4.Name = "textBox4";
+            this.textBox4.ReadOnly = true;
             this.textBox4.Size = new System.Drawing.Size(64, 50);
             this.textBox4.TabIndex = 30;
             this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
@@ -437,6 +440,7 @@ namespace OOP1
             this.textBox3.Location = new System.Drawing.Point(171, 35);
             this.textBox3.Multiline = true;
             this.textBox3.Name = "textBox3";
+            this.textBox3.ReadOnly = true;
             this.textBox3.Size = new System.Drawing.Size(64, 50);
             this.textBox3.TabIndex = 29;
             this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
@@ -446,6 +450,7 @@ namespace OOP1
             this.textBox2.Location = new System.Drawing.Point(101, 35);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
+            this.textBox2.ReadOnly = true;
             this.textBox2.Size = new System.Drawing.Size(64, 50);
             this.textBox2.TabIndex = 28;
             this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
@@ -471,6 +476,7 @@ namespace OOP1
             // 
             // button1
             // 
+            this.button1.Enabled = false;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button1.Location = new System.Drawing.Point(101, 280);
             this.button1.Name = "button1";
@@ -482,6 +488,7 @@ namespace OOP1
             // 
             // button2
             // 
+            this.button2.Enabled = false;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button2.Location = new System.Drawing.Point(241, 217);
             this.button2.Name = "button2";
@@ -493,6 +500,7 @@ namespace OOP1
             // 
             // button3
             // 
+            this.button3.Enabled = false;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button3.Location = new System.Drawing.Point(241, 280);
             this.button3.Name = "button3";
@@ -504,6 +512,7 @@ namespace OOP1
             // 
             // button4
             // 
+            this.button4.Enabled = false;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button4.Location = new System.Drawing.Point(171, 280);
             this.button4.Name = "button4";

@@ -9,3 +9,14 @@ C:\Users\Влад\source\repos\OOP1\OOP1\bin\Debug\OOP1.pdb
 C:\Users\Влад\source\repos\OOP1\OOP1\obj\Debug\OOP1.exe
 C:\Users\Влад\source\repos\OOP1\OOP1\obj\Debug\OOP1.pdb
 C:\Users\Влад\source\repos\OOP1\OOP1\obj\Debug\OOP1.Calculator.resources
+C:\Users\Влад\Desktop\ЛабыООП\OOP1\OOP1\bin\Debug\OOP1.exe.config
+C:\Users\Влад\Desktop\ЛабыООП\OOP1\OOP1\bin\Debug\OOP1.exe
+C:\Users\Влад\Desktop\ЛабыООП\OOP1\OOP1\bin\Debug\OOP1.pdb
+C:\Users\Влад\Desktop\ЛабыООП\OOP1\OOP1\obj\Debug\OOP1.csproj.AssemblyReference.cache
+C:\Users\Влад\Desktop\ЛабыООП\OOP1\OOP1\obj\Debug\OOP1.csproj.SuggestedBindingRedirects.cache
+C:\Users\Влад\Desktop\ЛабыООП\OOP1\OOP1\obj\Debug\OOP1.Calculator.resources
+C:\Users\Влад\Desktop\ЛабыООП\OOP1\OOP1\obj\Debug\OOP1.Properties.Resources.resources
+C:\Users\Влад\Desktop\ЛабыООП\OOP1\OOP1\obj\Debug\OOP1.csproj.GenerateResource.cache
+C:\Users\Влад\Desktop\ЛабыООП\OOP1\OOP1\obj\Debug\OOP1.csproj.CoreCompileInputs.cache
+C:\Users\Влад\Desktop\ЛабыООП\OOP1\OOP1\obj\Debug\OOP1.exe
+C:\Users\Влад\Desktop\ЛабыООП\OOP1\OOP1\obj\Debug\OOP1.pdb

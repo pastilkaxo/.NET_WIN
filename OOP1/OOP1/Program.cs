@@ -20,10 +20,6 @@ namespace OOP1
                 Application.Run(new Calculator());
 
             }
-            catch(Exception ex)
-            {
-                MessageBox.Show("Вызвано исключение:" + ex.Message);    
-            }
             finally
             {
                 MessageBox.Show("Программа выполнена.");
