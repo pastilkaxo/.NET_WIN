@@ -10,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using SystemJsonSerializer = System.Text.Json.JsonSerializer;
 
 namespace OOP2
@@ -20,7 +21,7 @@ namespace OOP2
         public string cb1, cb2;
        public string[] syms = {"+","-",",","=","_","?"};
        public List<object> list = new List<object>();
-       public static string path = "C:\\Users\\Влад\\source\\repos\\OOP2\\OOP2\\JSON\\";
+       public static string path = "C:\\Users\\Влад\\Desktop\\ЛабыООП\\OOP2\\OOP2\\JSON\\";
        public string fullPath = Path.Combine(path, "serialized.json");
        public string type , opdate, sum , fam,name,fath,bith,ser,num;
         public string date, month, day , operY;
@@ -250,6 +251,12 @@ namespace OOP2
                 MessageBox.Show("Введите данные!");
                 return false;
             }
+            else if (BalanceStatus.Text.Contains("--") || BalanceStatus.Text.Contains("--"))
+            {
+                MessageBox.Show("Введите баланс корректно!");
+                BalanceStatus.Clear();
+                return false;
+            }
             else if (year > 2024 || year <= 1900 || Convert.ToInt32(month) > 12 || Convert.ToInt32(month) < 0 ||
                 Convert.ToInt32(day) > 31 || Convert.ToInt32(day) < 0)
             {
@@ -356,7 +363,7 @@ namespace OOP2
         private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
         {
             char number = e.KeyChar;
-            if (!Char.IsDigit(number) && number != 8 && number != 44) 
+            if (!Char.IsDigit(number) && number != 8 && number != 44 && number != 45) 
             {
                 e.Handled = true;
             }

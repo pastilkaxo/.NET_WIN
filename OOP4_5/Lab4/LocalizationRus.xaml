@@ -1,0 +1,28 @@
+﻿<ResourceDictionary 
+  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+  xmlns:system="clr-namespace:System;assembly=mscorlib">
+
+    <system:String x:Key="itemAdder">Добавить</system:String>
+    <system:String x:Key="delItem">Удалить</system:String>
+    <system:String x:Key="updateItem">Редактировать</system:String>
+    <system:String x:Key="saveItem">Сохранить в JSON</system:String>
+    <system:String x:Key="searchPlace">Поле поиска:</system:String>
+    <system:String x:Key="catPlace">Категория:</system:String>
+    <system:String x:Key="minCost">Минимальная цена:</system:String>
+    <system:String x:Key="maxCost">Максимальная цена:</system:String>
+    <system:String x:Key="clearBtn">Очистить</system:String>
+    <system:String x:Key="filSave">Принять</system:String>
+    <system:String x:Key="searchBtn">Поиск</system:String>
+
+
+    <system:String x:Key="imageCol">Изображение</system:String>
+    <system:String x:Key="nameCol">Название</system:String>
+    <system:String x:Key="catCol">Категория</system:String>
+    <system:String x:Key="priceCol">Цена</system:String>
+    <system:String x:Key="qntCol">Колличество</system:String>
+    <system:String x:Key="rateCol">Рейтинг</system:String>
+    <system:String x:Key="descCol">Описание</system:String>
+
+
+</ResourceDictionary>
