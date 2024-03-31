@@ -20,7 +20,7 @@ namespace Lab4
     public partial class UpdateItem : Window
     {
        
-        public UpdateItem(Product selectedProduct, ListView listView, ObservableCollection<Product> products)
+        public UpdateItem(Product selectedProduct, ListView listView, List<Product> products)
         {
             InitializeComponent();
             this.selectedProduct = selectedProduct;
@@ -30,7 +30,7 @@ namespace Lab4
         public Product selectedProduct { get; set; }
         public ListView listView { get; set; }
 
-        public ObservableCollection<Product> Products { get; set; }
+        public List<Product> Products { get; set; }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {

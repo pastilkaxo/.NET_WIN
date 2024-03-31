@@ -17,6 +17,9 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Resources;
 using System.Windows.Shapes;
+using System.ComponentModel;
+using System.Collections.Specialized;
+using System.Collections.ObjectModel;
 using SystemJsonSerializer = System.Text.Json.JsonSerializer;
 
 namespace Lab4
@@ -29,14 +32,13 @@ namespace Lab4
 
     public partial class MainWindow : Window
     {
-        public ObservableCollection<Product> Products { get; set; } =  new ObservableCollection<Product>();
-
+        public static bool _sorted = false;
+        public List<Product> Products { get; set; } =  new List<Product>();
+        public List<Product> UnFilteredProducts  = new List<Product>();
         public MainWindow()
         {
             InitializeComponent();
         }
-
-
 
         public void Serialize(Stream stream , Object obj)
         {
@@ -46,8 +48,96 @@ namespace Lab4
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
+            ProductsListView.Items.Clear();
+            Products = Products.Where(p => p.Price <= Convert.ToDouble(maxCost.Text) && p.Price >= Convert.ToDouble(minCost.Text)).OrderBy(p => p.Price).ToList();
+            ProductsListView.Items.Clear();
             ProductsListView.ItemsSource = Products;
-            
+        }
+
+        private void Sort_By_Id(object sender, RoutedEventArgs e)
+        {
+
+            if (ProductsListView.ItemsSource != null)
+            {
+                ProductsListView.ItemsSource = null;
+                Products = Products.OrderBy(p => p.ID).ToList();
+                ProductsListView.Items.Clear();
+                ProductsListView.ItemsSource = Products;
+            }
+            else
+            {
+                Products = Products.OrderBy(p => p.ID).ToList();
+                ProductsListView.Items.Clear();
+                ProductsListView.ItemsSource = Products;
+            }
+        }
+
+        private void Sort_By_Name(object sender, RoutedEventArgs e)
+        {
+            if(ProductsListView.ItemsSource  != null)
+            {
+                ProductsListView.ItemsSource = null;
+                Products = Products.OrderBy(p => p.Name).ToList();
+                ProductsListView.Items.Clear();
+                ProductsListView.ItemsSource = Products;
+            }
+            else
+            {
+                Products = Products.OrderBy(p => p.Name).ToList();
+                ProductsListView.Items.Clear();
+                ProductsListView.ItemsSource = Products;
+            }
+        }
+
+
+        private void Sort_By_Rate(object sender, RoutedEventArgs e)
+        {
+            if (ProductsListView.ItemsSource != null)
+            {
+                ProductsListView.ItemsSource = null;
+                Products = Products.OrderBy(p => p.Rate).ToList();
+                ProductsListView.Items.Clear();
+                ProductsListView.ItemsSource = Products;
+            }
+            else
+            {
+                Products = Products.OrderBy(p => p.Rate).ToList();
+                ProductsListView.Items.Clear();
+                ProductsListView.ItemsSource = Products;
+            }
+        }
+
+        private void Sort_By_Qnt(object sender, RoutedEventArgs e)
+        {
+            if (ProductsListView.ItemsSource != null)
+            {
+                ProductsListView.ItemsSource = null;
+                Products = Products.OrderBy(p => p.Quantity).ToList();
+                ProductsListView.Items.Clear();
+                ProductsListView.ItemsSource = Products;
+            }
+            else
+            {
+                Products = Products.OrderBy(p => p.Quantity).ToList();
+                ProductsListView.Items.Clear();
+                ProductsListView.ItemsSource = Products;
+            }
+        }
+        private void Sort_By_Price(object sender, RoutedEventArgs e)
+        {
+            if (ProductsListView.ItemsSource != null)
+            {
+                ProductsListView.ItemsSource = null;
+                Products = Products.OrderBy(p => p.Price).ToList();
+                ProductsListView.Items.Clear();
+                ProductsListView.ItemsSource = Products;
+            }
+            else
+            {
+                Products = Products.OrderBy(p => p.Price).ToList();
+                ProductsListView.Items.Clear();
+                ProductsListView.ItemsSource = Products;
+            }
         }
 
 
@@ -74,7 +164,7 @@ namespace Lab4
 
         private void CommandBinding_Executed(object sender, ExecutedRoutedEventArgs e)
         {
-            AddItem adder = new AddItem(ProductsListView, Products);
+            AddItem adder = new AddItem(ProductsListView, Products, UnFilteredProducts);
             adder.ShowDialog();
         }
 
@@ -155,6 +245,13 @@ namespace Lab4
                 MessageBox.Show("Данные сохранены!");
             }
         }
+
+        private void CommandBinding_Executed_5(object sender, ExecutedRoutedEventArgs e)
+        {
+            ProductsListView.Items.Clear();
+            ProductsListView.ItemsSource = UnFilteredProducts;
+        }
+
     }
 
 
