@@ -24,6 +24,9 @@
         <Label x:Name="catValue" Content="" HorizontalAlignment="Left" Margin="94,168,0,0" VerticalAlignment="Top" FontFamily="Arial Black" Foreground="#FFE62828"/>
         <Label x:Name="qntValue" Content="" HorizontalAlignment="Left" Margin="113,199,0,0" VerticalAlignment="Top" FontFamily="Arial Black" Foreground="#FFE62828"/>
         <Label x:Name="rateValue" Content="" HorizontalAlignment="Left" Margin="79,230,0,0" VerticalAlignment="Top" FontFamily="Arial Black" Foreground="#FFE62828"/>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="179" Margin="268,27,0,0" VerticalAlignment="Top" Width="340">
+            <Image x:Name="itemImage"/>
+        </Border>
 
     </Grid>
 </Window>

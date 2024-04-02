@@ -43,3 +43,7 @@ C:\Users\Влад\source\repos\Lab4\Lab4\obj\Debug\Localization.baml
 C:\Users\Влад\source\repos\Lab4\Lab4\obj\Debug\LocalizationRus.baml
 C:\Users\Влад\source\repos\Lab4\Lab4\obj\Debug\SelectedItem.g.cs
 C:\Users\Влад\source\repos\Lab4\Lab4\obj\Debug\SelectedItem.baml
+C:\Users\Влад\source\repos\Lab4\Lab4\obj\Debug\PrePage.g.cs
+C:\Users\Влад\source\repos\Lab4\Lab4\obj\Debug\PrePage.baml
+C:\Users\Влад\source\repos\Lab4\Lab4\obj\Debug\FileCheck.g.cs
+C:\Users\Влад\source\repos\Lab4\Lab4\obj\Debug\FileCheck.baml

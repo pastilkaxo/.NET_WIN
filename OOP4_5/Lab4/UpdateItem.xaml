@@ -29,13 +29,15 @@
         <Label x:Name="IdValue" Content="" HorizontalAlignment="Left" Margin="55,72,0,0" VerticalAlignment="Top" FontFamily="Arial Black" Foreground="#FFC50000"/>
         <Label Content="Цена" HorizontalAlignment="Left" Margin="226,229,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.671,-0.456" FontFamily="Arial Black"/>
         <TextBox x:Name="priceValue" HorizontalAlignment="Left" Margin="295,232,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="88" PreviewTextInput="CostValue_PreviewTextInput"/>
-        <Slider x:Name="rateValue" HorizontalAlignment="Left" Margin="79,232,0,0" VerticalAlignment="Top" Width="120"/>
+        <Slider x:Name="rateValue" HorizontalAlignment="Left" Margin="86,232,0,0" VerticalAlignment="Top" Width="120"/>
         <ComboBox x:Name="imageValue" HorizontalAlignment="Left" Margin="119,136,0,0" VerticalAlignment="Top" Width="264">
             <ComboBoxItem Content=""/>
             <ComboBoxItem Content="C:\\Users\\Влад\\Desktop\\img\\bike1.png"/>
             <ComboBoxItem Content="C:\\Users\\Влад\\Desktop\\img\\bike12.png"/>
             <ComboBoxItem Content="C:\\Users\\Влад\\Desktop\\img\\bike5.png"/>
         </ComboBox>
+        <Label Content="0" HorizontalAlignment="Left" Margin="84,242,0,0" VerticalAlignment="Top"/>
+        <Label Content="10" HorizontalAlignment="Left" Margin="188,241,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>

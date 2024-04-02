@@ -33,6 +33,7 @@ namespace Lab4
             qntValue.Content = foundedProduct.Quantity;
             costValue.Content = foundedProduct.Price;
             rateValue.Content = foundedProduct.Rate;
+            itemImage.Source = new BitmapImage(new Uri(foundedProduct.Image));
             descValue.Text = foundedProduct.Description;
 
             var path = "C:\\Users\\Влад\\Desktop\\Курсоры ВОВ\\Point.cur";

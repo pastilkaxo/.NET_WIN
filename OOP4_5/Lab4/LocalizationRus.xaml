@@ -25,5 +25,6 @@
     <system:String x:Key="descCol">Описание</system:String>
     <system:String x:Key="sortLbl">Сортировка:</system:String>
     <system:String x:Key="catChange">Выберите категорию:</system:String>
-
+    <system:String x:Key="backBtn">Назад</system:String>
+    
 </ResourceDictionary>

@@ -24,5 +24,6 @@
     <system:String x:Key="descCol">Description</system:String>
     <system:String x:Key="sortLbl">Sort:</system:String>
     <system:String x:Key="catChange">Choose category:</system:String>
+    <system:String x:Key="backBtn">Back</system:String>
 
 </ResourceDictionary>

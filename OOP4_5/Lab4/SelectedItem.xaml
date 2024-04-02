@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Lab4"
         mc:Ignorable="d"
-        Title="SelectedItem" Height="278" Width="412" ResizeMode="NoResize" Loaded="Window_Loaded" Icon="/cur.png" WindowStartupLocation="CenterScreen">
+        Title="SelectedItem" Height="328" Width="602" ResizeMode="NoResize" Loaded="Window_Loaded" Icon="/cur.png" WindowStartupLocation="CenterScreen">
     <Grid>
         <Label Content="Имя" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
         <Label Content="Цена" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top"/>
@@ -21,6 +21,11 @@
         <Label x:Name="Rate" Content="Имя" HorizontalAlignment="Left" Margin="92,134,0,0" VerticalAlignment="Top"/>
         <Label x:Name="Id" Content="Имя" HorizontalAlignment="Left" Margin="92,165,0,0" VerticalAlignment="Top"/>
         <Label x:Name="Desc" Content="Имя" HorizontalAlignment="Left" Margin="92,196,0,0" VerticalAlignment="Top"/>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="163" Margin="301,34,0,0" VerticalAlignment="Top" Width="184">
+            <Image x:Name="itemImage"/>
+        </Border>
+        <Label Content="Страна доставки:" HorizontalAlignment="Left" Margin="10,256,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="Desc_Copy" Content="Беларусь" HorizontalAlignment="Left" Margin="114,256,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>

@@ -21,6 +21,7 @@ using System.ComponentModel;
 using System.Collections.Specialized;
 using System.Collections.ObjectModel;
 using SystemJsonSerializer = System.Text.Json.JsonSerializer;
+using System.Runtime.InteropServices.ComTypes;
 
 namespace Lab4
 {
@@ -222,6 +223,30 @@ namespace Lab4
             this.Resources = new ResourceDictionary() { Source = new Uri("LocalizationRus.xaml", UriKind.Relative) };
         }
 
+        private void LoadProductsFromJson(string filePath)
+        {
+            try
+            {
+                if (File.Exists(filePath))
+                {
+                    string json = File.ReadAllText(filePath);
+
+                    Products = SystemJsonSerializer.Deserialize<List<Product>>(json);
+                    UnFilteredProducts = new List<Product>(Products);
+                    ProductsListView.ItemsSource = Products;
+                }
+                else
+                {
+                    MessageBox.Show("Файл JSON не найден.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ошибка загрузки данных из файла JSON: {ex.Message}");
+            }
+        }
+
+
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             var path = "C:\\Users\\Влад\\Desktop\\Курсоры ВОВ\\Point.cur";
@@ -230,6 +255,9 @@ namespace Lab4
                 var cursor = new Cursor(stream);
                 this.Cursor = cursor;
             }
+            string JsonPath = "C:\\Users\\Влад\\source\\repos\\Lab4\\Lab4\\JSON\\data.json";
+            LoadProductsFromJson(JsonPath);
+
         }
 
         private void CommandBinding_Executed(object sender, ExecutedRoutedEventArgs e)
@@ -281,6 +309,8 @@ namespace Lab4
 
         private void CommandBinding_Executed_3(object sender, ExecutedRoutedEventArgs e)
         {
+            bool found = false;
+
             if (Products.Count == 0)
             {
                 MessageBox.Show("Товаров нет!");
@@ -295,12 +325,14 @@ namespace Lab4
                         Founded founded = new Founded(product);
                         founded.ShowDialog();
                         SearchText.Clear();
+                        found = true;
+                        break;
                     }
-                    else
-                    {
-                        MessageBox.Show("Товара нет с таким именем!");
-                        SearchText.Clear();
-                    }
+                }
+                if (!found)
+                {
+                    MessageBox.Show("Товара нет с таким именем!");
+                    SearchText.Clear();
                 }
             }
         }
@@ -376,6 +408,13 @@ namespace Lab4
                 MessageBox.Show("Не выбран товар!");
             }
 
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            PrePage page = new PrePage();
+            page.Show();
+            this.Close();
         }
     }
 

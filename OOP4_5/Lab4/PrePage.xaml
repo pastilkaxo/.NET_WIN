@@ -1,0 +1,26 @@
+﻿<Window x:Class="Lab4.PrePage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lab4"
+        mc:Ignorable="d"
+        Title="PrePage"  Height="400" Width="931" Icon="/cur.png" WindowStartupLocation="CenterScreen" Background="#FF5BCC96" ResizeMode="NoResize">
+    <Grid >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="173*"/>
+            <RowDefinition Height="108*"/>
+            <RowDefinition Height="103*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="182*"/>
+            <ColumnDefinition Width="577*"/>
+            <ColumnDefinition Width="172*"/>
+        </Grid.ColumnDefinitions>
+        <Label Content="BM Shop" HorizontalAlignment="Left" Margin="106,10,0,0" VerticalAlignment="Top" FontFamily="Arial Black" FontSize="72" Foreground="#FFC11010" Grid.Column="1"/>
+        <Button Content="Просмотр JSON" HorizontalAlignment="Left" Margin="14,0,0,0" VerticalAlignment="Center" Height="70" Width="198" FontFamily="Arial Black" FontSize="16" Background="#FFFFA3A3" Grid.Column="1" Grid.Row="1" BorderThickness="0,1,1,1" Click="Button_Click_1" />
+        <Button Content="Управление товарами" HorizontalAlignment="Left" Margin="360,0,0,0" VerticalAlignment="Center" Height="70" Width="198" FontFamily="Arial Black" FontSize="14" Background="#FFFFA3A3" Grid.Column="1" Grid.Row="1" Click="Button_Click"/>
+
+
+    </Grid>
+</Window>

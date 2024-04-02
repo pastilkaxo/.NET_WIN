@@ -35,6 +35,7 @@ namespace Lab4
             Count.Content = Product.Quantity;
             Id.Content = Product.ID;
             Rate.Content = Product.Rate;
+            itemImage.Source = new BitmapImage(new Uri(Product.Image));
         }
     }
 }

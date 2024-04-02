@@ -83,10 +83,16 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="FileCheck.xaml.cs">
+      <DependentUpon>FileCheck.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Founded.xaml.cs">
       <DependentUpon>Founded.xaml</DependentUpon>
     </Compile>
     <Compile Include="ISerializer.cs" />
+    <Compile Include="PrePage.xaml.cs">
+      <DependentUpon>PrePage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Product.cs" />
     <Compile Include="SelectedItem.xaml.cs">
       <DependentUpon>SelectedItem.xaml</DependentUpon>
@@ -96,6 +102,10 @@
       <DependentUpon>UpdateItem.xaml</DependentUpon>
     </Compile>
     <Page Include="AddItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FileCheck.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -126,6 +136,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="PrePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="SelectedItem.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
