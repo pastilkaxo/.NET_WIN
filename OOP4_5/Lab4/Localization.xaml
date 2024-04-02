@@ -23,6 +23,6 @@
     <system:String x:Key="rateCol">Rate</system:String>
     <system:String x:Key="descCol">Description</system:String>
     <system:String x:Key="sortLbl">Sort:</system:String>
-
+    <system:String x:Key="catChange">Choose category:</system:String>
 
 </ResourceDictionary>

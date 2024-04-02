@@ -57,23 +57,53 @@ namespace Lab4
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            listView.Items.Remove(selectedProduct);
-
-                selectedProduct.Name = nameValue.Text;
-                selectedProduct.Image = imageValue.Text;
-                selectedProduct.Quantity = Convert.ToInt32(qntValue.Text);
-                selectedProduct.Category = catValue.Text;
-                selectedProduct.Rate = Convert.ToInt32(rateValue.Value);
-                selectedProduct.Description = descValue.Text;
-                selectedProduct.Price = Convert.ToDouble(priceValue.Text);
-                listView.Items.Add(selectedProduct);
-                Close();
+            if(listView.ItemsSource != null)
+            {
+                try
+                {
+                    listView.ItemsSource = null;
+                    selectedProduct.Name = nameValue.Text;
+                    selectedProduct.Image = imageValue.Text;
+                    selectedProduct.Quantity = Convert.ToInt32(qntValue.Text);
+                    selectedProduct.Category = catValue.Text;
+                    selectedProduct.Rate = Convert.ToInt32(rateValue.Value);
+                    selectedProduct.Description = descValue.Text;
+                    selectedProduct.Price = Convert.ToDouble(priceValue.Text);
+                    listView.Items.Remove(selectedProduct);
+                    listView.Items.Add(selectedProduct);
+                    listView.Items.Clear();
+                    listView.ItemsSource = Products;
+                    Close();
+                }
+                catch(FormatException ex)
+                {
+                    MessageBox.Show("Неверный формат!");
+                }
+            }
+            else
+            {
+                try
+                {
+                   
+                    selectedProduct.Name = nameValue.Text;
+                    selectedProduct.Image = imageValue.Text;
+                    selectedProduct.Quantity = Convert.ToInt32(qntValue.Text);
+                    selectedProduct.Category = catValue.Text;
+                    selectedProduct.Rate = Convert.ToInt32(rateValue.Value);
+                    selectedProduct.Description = descValue.Text;
+                    selectedProduct.Price = Convert.ToDouble(priceValue.Text);
+                    listView.Items.Remove(selectedProduct);
+                    listView.Items.Add(selectedProduct);
+                    Close();
+                }
+                catch(FormatException ex)
+                {
+                    MessageBox.Show("Неверный формат!");
+                }
+            }
 
 
         }
-
-
-
 
         private void QntValue_PreviewTextInput(object sender, TextCompositionEventArgs e)
         {

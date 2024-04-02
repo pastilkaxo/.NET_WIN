@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Lab4"
         mc:Ignorable="d"
-        Title="MainWindow" Height="750" Width="1438" Icon="/cur.png" WindowStartupLocation="CenterScreen" Background="#FF5BCC96" Cursor="Arrow" Loaded="Window_Loaded">
+        Title="MainWindow" MinHeight="650" MinWidth="1000" Height="750" Width="1438" Icon="/cur.png" WindowStartupLocation="CenterScreen" Background="#FF5BCC96" Cursor="Arrow" Loaded="Window_Loaded">
     <Window.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
@@ -33,9 +33,9 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <TextBlock x:Name="Summury" HorizontalAlignment="Left" Margin="10,8,0,634" TextWrapping="Wrap" Text="BM Shop" TextAlignment="Center" FontFamily="Segoe UI Black" FontSize="48" Width="213"/>
+        <TextBlock x:Name="Summury" HorizontalAlignment="Left" Margin="10,8,0,627" TextWrapping="Wrap" Text="BM Shop" TextAlignment="Center" FontFamily="Segoe UI Black" FontSize="48" Width="213"/>
 
-        <ListView x:Name="ProductsListView" Margin="253,10,39,41" HorizontalContentAlignment="Center" VerticalContentAlignment="Top">
+        <ListView x:Name="ProductsListView" Margin="253,10,39,41" HorizontalContentAlignment="Center" VerticalContentAlignment="Top" MouseDoubleClick="ProductsListView_MouseDoubleClick">
             <ListView.View>
                 <GridView>
                     <!-- ИД -->
@@ -80,13 +80,13 @@
         <Button x:Name="delItem" Style="{StaticResource ButStyle}" Content="{DynamicResource delItem}" HorizontalAlignment="Left" Margin="10,107,0,0" VerticalAlignment="Top" Width="106"  Command="ApplicationCommands.Delete"/>
         <TextBox x:Name="SearchText" HorizontalAlignment="Left" Margin="10,216,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="194" Height="32" FontSize="20"/>
         <Button x:Name="updateItem" Style="{StaticResource ButStyle}" Content="{DynamicResource updateItem}" HorizontalAlignment="Left" Margin="10,132,0,0" VerticalAlignment="Top" Width="106" Command="ApplicationCommands.Paste"/>
-        <TextBox x:Name="minCost" HorizontalAlignment="Left" Margin="36,290,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" BorderBrush="#FFD81E1E"/>
-        <TextBox x:Name="maxCost" HorizontalAlignment="Left" Margin="36,332,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" BorderBrush="#FFD81E1E"/>
+        <TextBox x:Name="minCost" HorizontalAlignment="Left" Margin="36,290,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" BorderBrush="#FFD81E1E" PreviewTextInput="minCost_PreviewTextInput"/>
+        <TextBox x:Name="maxCost" HorizontalAlignment="Left" Margin="36,332,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" BorderBrush="#FFD81E1E" PreviewTextInput="minCost_PreviewTextInput"/>
         <TextBlock x:Name="maxPlace" HorizontalAlignment="Left" Margin="36,313,0,0" TextWrapping="Wrap" Text="{DynamicResource maxCost}" VerticalAlignment="Top"/>
-        <Button x:Name="filSave" Content="{DynamicResource filSave}" HorizontalAlignment="Left" Margin="38,367,0,0" VerticalAlignment="Top" Width="83" Height="33" Background="#FF1618D2" BorderBrush="#FFCA1515" Foreground="White" FontFamily="Arial Black" Click="Button_Click_2"/>
+        <Button x:Name="filSave" Content="{DynamicResource filSave}" HorizontalAlignment="Left" Margin="38,407,0,0" VerticalAlignment="Top" Width="83" Height="32" Background="#FF1618D2" BorderBrush="#FFCA1515" Foreground="White" FontFamily="Arial Black" Click="Button_Click_2"/>
         <Button x:Name="saveJson" Content="{DynamicResource saveItem}" HorizontalAlignment="Left" Height="33" Margin="10,157,0,0" VerticalAlignment="Top" Width="162" Background="#FF76FF08" FontFamily="Arial Black" BorderBrush="#FFC72828" RenderTransformOrigin="-0.58,0.88" Command="ApplicationCommands.SaveAs"/>
         <Label x:Name="searchPlace" Content="{DynamicResource searchPlace}" HorizontalAlignment="Left" Margin="10,196,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.211,-0.076" FontFamily="Arial Black"/>
-        <Button x:Name="clearBtn" Content="{DynamicResource clearBtn}" HorizontalAlignment="Left" Margin="80,518,0,0" VerticalAlignment="Top" Width="82" Height="33" Background="Black" BorderBrush="#FFCA1515" Foreground="White" FontFamily="Arial Black" Command="ApplicationCommands.Cut"/>
+        <Button x:Name="clearBtn" Content="{DynamicResource clearBtn}" HorizontalAlignment="Left" Margin="124,528,0,0" VerticalAlignment="Top" Width="82" Height="33" Background="Black" BorderBrush="#FFCA1515" Foreground="White" FontFamily="Arial Black" Command="ApplicationCommands.Cut" />
         <Button x:Name="SearchBtn" Content="{DynamicResource searchBtn}" HorizontalAlignment="Left" Margin="209,216,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.543,-0.22" Height="32" Background="#FF08FFD7" Command="ApplicationCommands.Find"/>
         <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="24" Margin="128,107,0,0" VerticalAlignment="Top" Width="24" CornerRadius="50,50,50,50">
             <UIElement.RenderTransform>
@@ -102,20 +102,21 @@
         <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="25" Margin="128,77,0,0" VerticalAlignment="Top" Width="24" CornerRadius="50,50,50,50">
             <Image Source="/pngwing.com (6).png" MouseDown="Image_MouseDown_1"/>
         </Border>
-        <Button Content="ID" HorizontalAlignment="Left" Margin="36,440,0,0" VerticalAlignment="Top" Width="80" Style="{StaticResource ButStyle}" Click="Sort_By_Id"/>
-        <Button Content="{DynamicResource rateCol}" HorizontalAlignment="Left" Margin="36,464,0,0" VerticalAlignment="Top" Width="80" Style="{StaticResource ButStyle}" Click="Sort_By_Rate"/>
-        <Button Content="{DynamicResource qntCol}" HorizontalAlignment="Left" Margin="36,490,0,0" VerticalAlignment="Top" Width="80" Style="{StaticResource ButStyle}" FontSize="10" Click="Sort_By_Qnt"/>
-        <Button Content="{DynamicResource nameCol}" HorizontalAlignment="Left" Margin="122,440,0,0" VerticalAlignment="Top" Width="80" Style="{StaticResource ButStyle}" Click="Sort_By_Name"/>
-        <Button Content="{DynamicResource priceCol}" HorizontalAlignment="Left" Margin="122,464,0,0" VerticalAlignment="Top" Width="80" Style="{StaticResource ButStyle}" Click="Sort_By_Price"/>
-        <Label Content="{DynamicResource sortLbl}" HorizontalAlignment="Left" Margin="36,416,0,0" VerticalAlignment="Top" FontFamily="Arial Black"/>
+        <Button Content="ID" HorizontalAlignment="Left" Margin="38,476,0,0" VerticalAlignment="Top" Width="80" Style="{StaticResource ButStyle}" Click="Sort_By_Id"/>
+        <Button Content="{DynamicResource rateCol}" HorizontalAlignment="Left" Margin="38,500,0,0" VerticalAlignment="Top" Width="80" Style="{StaticResource ButStyle}" Click="Sort_By_Rate"/>
+        <Button Content="{DynamicResource qntCol}" HorizontalAlignment="Left" Margin="38,526,0,0" VerticalAlignment="Top" Width="80" Style="{StaticResource ButStyle}" FontSize="10" Click="Sort_By_Qnt"/>
+        <Button Content="{DynamicResource nameCol}" HorizontalAlignment="Left" Margin="124,476,0,0" VerticalAlignment="Top" Width="80" Style="{StaticResource ButStyle}" Click="Sort_By_Name"/>
+        <Button Content="{DynamicResource priceCol}" HorizontalAlignment="Left" Margin="124,500,0,0" VerticalAlignment="Top" Width="80" Style="{StaticResource ButStyle}" Click="Sort_By_Price"/>
+        <Label Content="{DynamicResource sortLbl}" HorizontalAlignment="Left" Margin="38,452,0,0" VerticalAlignment="Top" FontFamily="Arial Black"/>
         <TextBlock x:Name="maxPlace_Copy" HorizontalAlignment="Left" Margin="38,269,0,0" TextWrapping="Wrap" Text="{DynamicResource minCost}" VerticalAlignment="Top"/>
         <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="321" Margin="20,253,0,0" VerticalAlignment="Top" Width="208" Panel.ZIndex="-2"/>
-        <ComboBox HorizontalAlignment="Left" Margin="124,491,0,0" VerticalAlignment="Top" Width="78">
+        <ComboBox x:Name="filCat" HorizontalAlignment="Left" Margin="38,374,0,0" VerticalAlignment="Top" Width="78" >
             <ComboBoxItem Content=""/>
             <ComboBoxItem Content="Велосипед"/>
             <ComboBoxItem Content="Рама"/>
             <ComboBoxItem Content="Руль"/>
         </ComboBox>
+        <TextBlock x:Name="maxPlace_Copy1" HorizontalAlignment="Left" Margin="38,355,0,0" TextWrapping="Wrap" Text="{DynamicResource catChange}" VerticalAlignment="Top"/>
 
 
     </Grid>

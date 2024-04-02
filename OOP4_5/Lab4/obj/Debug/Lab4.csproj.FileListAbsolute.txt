@@ -41,3 +41,5 @@ C:\Users\Влад\source\repos\Lab4\Lab4\bin\Debug\System.ValueTuple.xml
 C:\Users\Влад\source\repos\Lab4\Lab4\obj\Debug\Lab4.csproj.CopyComplete
 C:\Users\Влад\source\repos\Lab4\Lab4\obj\Debug\Localization.baml
 C:\Users\Влад\source\repos\Lab4\Lab4\obj\Debug\LocalizationRus.baml
+C:\Users\Влад\source\repos\Lab4\Lab4\obj\Debug\SelectedItem.g.cs
+C:\Users\Влад\source\repos\Lab4\Lab4\obj\Debug\SelectedItem.baml

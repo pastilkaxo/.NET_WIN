@@ -24,10 +24,7 @@ using SystemJsonSerializer = System.Text.Json.JsonSerializer;
 
 namespace Lab4
 {
-    /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
-    /// </summary>
-    /// 
+
 
 
     public partial class MainWindow : Window
@@ -48,10 +45,82 @@ namespace Lab4
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
-            ProductsListView.Items.Clear();
-            Products = Products.Where(p => p.Price <= Convert.ToDouble(maxCost.Text) && p.Price >= Convert.ToDouble(minCost.Text)).OrderBy(p => p.Price).ToList();
-            ProductsListView.Items.Clear();
-            ProductsListView.ItemsSource = Products;
+            if (string.IsNullOrEmpty(maxCost.Text) && string.IsNullOrEmpty(minCost.Text) && string.IsNullOrEmpty(filCat.Text))
+            {
+                MessageBox.Show("Пустые параметры!");
+            }
+            else
+            {
+                if (string.IsNullOrEmpty(maxCost.Text) || string.IsNullOrEmpty(minCost.Text))
+                {
+                    if(ProductsListView.ItemsSource != null)
+                    {
+                        ProductsListView.ItemsSource = null;
+                        Products = Products.Where(p => p.Category == filCat.Text).ToList();
+                        ProductsListView.Items.Clear();
+                        ProductsListView.ItemsSource = Products;
+                    }
+                    else
+                    {
+                        Products = Products.Where(p => p.Category == filCat.Text).ToList();
+                        ProductsListView.Items.Clear();
+                        ProductsListView.ItemsSource = Products;
+                    }
+                }
+                else if (!string.IsNullOrEmpty(filCat.Text))
+                {
+
+                    try
+                    {
+                        if(ProductsListView.ItemsSource != null)
+                        {
+                            ProductsListView.ItemsSource = null; 
+                            Products = Products.Where(p => p.Price <= Convert.ToDouble(maxCost.Text) && p.Price >= Convert.ToDouble(minCost.Text) && p.Category == filCat.Text).ToList();
+                            ProductsListView.Items.Clear();
+                            ProductsListView.ItemsSource = Products;
+                        }
+                        else
+                        {
+                            Products = Products.Where(p => p.Price <= Convert.ToDouble(maxCost.Text) && p.Price >= Convert.ToDouble(minCost.Text) && p.Category == filCat.Text).ToList();
+                            ProductsListView.Items.Clear();
+                            ProductsListView.ItemsSource = Products;
+                        }
+                    }
+                    catch(FormatException ex)
+                    {
+                        MessageBox.Show("Неверный формат!");
+                    }
+                }
+                else
+                {
+                    try
+                    {
+                        if (ProductsListView.ItemsSource != null)
+                        {
+                            ProductsListView.ItemsSource = null;
+                            Products = Products.Where(p => p.Price <= Convert.ToDouble(maxCost.Text) && p.Price >= Convert.ToDouble(minCost.Text) ).ToList();
+                            ProductsListView.Items.Clear();
+                            ProductsListView.ItemsSource = Products;
+                        }
+                        else
+                        {
+                            Products = Products.Where(p => p.Price <= Convert.ToDouble(maxCost.Text) && p.Price >= Convert.ToDouble(minCost.Text)).ToList();
+                            ProductsListView.Items.Clear();
+                            ProductsListView.ItemsSource = Products;
+                        }
+                    }
+                    catch (FormatException ex)
+                    {
+                        MessageBox.Show("Неверный формат!");
+                    }
+                }
+
+            }
+            maxCost.Clear();
+            minCost.Clear();
+            filCat.SelectedIndex = -1;
+
+
         }
 
         private void Sort_By_Id(object sender, RoutedEventArgs e)
@@ -142,6 +211,7 @@ namespace Lab4
 
 
 
+
         private void Image_MouseDown(object sender, MouseButtonEventArgs e)
         {
             this.Resources = new ResourceDictionary() { Source = new Uri("Localization.xaml", UriKind.Relative) };
@@ -177,8 +247,21 @@ namespace Lab4
             }
             else
             {
-
-                ProductsListView.Items.Remove(selectedProduct);
+                if(ProductsListView.ItemsSource != null)
+                {
+                    ProductsListView.ItemsSource = null;
+                    ProductsListView.Items.Remove(selectedProduct);
+                    Products.Remove(selectedProduct);
+                    UnFilteredProducts.Remove(selectedProduct);
+                    ProductsListView.Items.Clear();
+                    ProductsListView.ItemsSource = Products;
+                }
+                else
+                {
+                    ProductsListView.Items.Remove(selectedProduct);
+                    Products.Remove(selectedProduct);
+                    UnFilteredProducts.Remove(selectedProduct);
+                }
             }
         }
 
@@ -246,12 +329,54 @@ namespace Lab4
             }
         }
 
+
         private void CommandBinding_Executed_5(object sender, ExecutedRoutedEventArgs e)
         {
-            ProductsListView.Items.Clear();
-            ProductsListView.ItemsSource = UnFilteredProducts;
+
+            if (ProductsListView.ItemsSource != null)
+            {
+                ProductsListView.ItemsSource = null;
+                Products = new List<Product>(UnFilteredProducts); 
+                ProductsListView.Items.Clear();
+                ProductsListView.ItemsSource = Products;
+            }
+            else
+            {
+                Products = new List<Product>(UnFilteredProducts); 
+                ProductsListView.Items.Clear();
+                ProductsListView.ItemsSource = Products;
+            }
+
         }
 
+        private void minCost_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            minCost.MaxLength = 15;
+            maxCost.MaxLength = 15;
+            if (!Char.IsDigit(e.Text, 0) && e.Text != ",") e.Handled = true;
+        }
+
+        private void ProductsListView_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            try
+            {
+                if (ProductsListView.SelectedItem == null)
+                {
+                    MessageBox.Show("Не выбран товар!");
+                }
+                else
+                {
+                    Product selectedProduct = (Product)ProductsListView.SelectedItem;
+                    SelectedItem selectedItem = new SelectedItem(selectedProduct);
+                    selectedItem.ShowDialog();
+                }
+            }
+            catch (NullReferenceException ex)
+            {
+                MessageBox.Show("Не выбран товар!");
+            }
+
+        }
     }
 
 

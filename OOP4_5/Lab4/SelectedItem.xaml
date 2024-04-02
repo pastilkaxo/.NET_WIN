@@ -1,0 +1,26 @@
+﻿<Window x:Class="Lab4.SelectedItem"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lab4"
+        mc:Ignorable="d"
+        Title="SelectedItem" Height="278" Width="412" ResizeMode="NoResize" Loaded="Window_Loaded" Icon="/cur.png" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Label Content="Имя" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+        <Label Content="Цена" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top"/>
+        <Label Content="Категория" HorizontalAlignment="Left" Margin="10,72,0,0" VerticalAlignment="Top"/>
+        <Label Content="Количество" HorizontalAlignment="Left" Margin="10,103,0,0" VerticalAlignment="Top"/>
+        <Label Content="Рейтинг" HorizontalAlignment="Left" Margin="10,134,0,0" VerticalAlignment="Top"/>
+        <Label Content="ID" HorizontalAlignment="Left" Margin="10,165,0,0" VerticalAlignment="Top"/>
+        <Label Content="Описание" HorizontalAlignment="Left" Margin="10,196,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="Name" Content="Имя" HorizontalAlignment="Left" Margin="92,10,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="Cost" Content="Имя" HorizontalAlignment="Left" Margin="92,41,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="Cat" Content="Имя" HorizontalAlignment="Left" Margin="92,72,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="Count" Content="Имя" HorizontalAlignment="Left" Margin="92,103,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="Rate" Content="Имя" HorizontalAlignment="Left" Margin="92,134,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="Id" Content="Имя" HorizontalAlignment="Left" Margin="92,165,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="Desc" Content="Имя" HorizontalAlignment="Left" Margin="92,196,0,0" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>
