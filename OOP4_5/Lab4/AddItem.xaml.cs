@@ -4,6 +4,7 @@ using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.IO;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -27,16 +28,19 @@ namespace Lab4
 
     public partial class AddItem : Window
     {
-        public AddItem(ListView listView, List<Product> products , List<Product> filtered)
+        public AddItem(ListView listView, List<Product> products , List<Product> filtered,bool Eng)
         {
             InitializeComponent();
             ListView = listView;
             Products = products;
             filteredProd = filtered;
+            eng = Eng;
         }
 
 
         public ListView ListView { get; set; }
+
+        public bool eng { get; set; }
 
         public List<Product> Products { get; set; }
         public List<Product> filteredProd { get; set; }
@@ -133,6 +137,33 @@ namespace Lab4
                 var cursor = new Cursor(fs);
                 this.Cursor = cursor;
             }
+
+            if (eng)
+            {
+                this.Resources = new ResourceDictionary() { Source = new Uri("Localization.xaml", UriKind.Relative) };
+            }
+            else
+            {
+                this.Resources = new ResourceDictionary() { Source = new Uri("LocalizationRus.xaml", UriKind.Relative) };
+            }
+
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            IdValue.Clear();
+            NameValue.Clear();
+            CatValue.SelectedIndex = -1;
+            RateValue.Value = 0;
+            CostValue.Clear();
+            DescValue.Clear();
+            QntValue.Clear();
+            ImageValue.SelectedIndex = -1;
+        }
+
+        private void RateValue_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            curRate.Content = Convert.ToInt32(RateValue.Value);
         }
     }
 }

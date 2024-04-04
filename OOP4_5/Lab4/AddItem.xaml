@@ -6,14 +6,18 @@
         xmlns:local="clr-namespace:Lab4"
         mc:Ignorable="d"
         Title="AddItem" Height="582" Width="364" Icon="/cur.png" WindowStartupLocation="CenterScreen" Background="#FF5BCC96" ResizeMode="NoResize" Loaded="Window_Loaded">
+    <Window.Resources>
+        <ResourceDictionary Source="LocalizationRus.xaml" />
+    </Window.Resources>
+
     <Grid Margin="0,0,0,-6">
         <TextBlock HorizontalAlignment="Left" TextAlignment="Center" Margin="51,23,0,0" TextWrapping="Wrap" Text="Добавление нового товара" VerticalAlignment="Top" Height="61" Width="252" FontSize="20" FontFamily="Segoe UI Black" Foreground="#FFC83434"/>
-        <TextBlock HorizontalAlignment="Left" Margin="10,134,0,0" TextWrapping="Wrap" Text="Изображение:" VerticalAlignment="Top" RenderTransformOrigin="-0.375,-0.537" FontFamily="Arial Black"/>
-        <TextBlock HorizontalAlignment="Left" Margin="10,176,0,0" TextWrapping="Wrap" Text="Имя товара:" VerticalAlignment="Top" RenderTransformOrigin="-0.375,-0.537" FontFamily="Arial Black"/>
-        <TextBlock HorizontalAlignment="Left" Margin="10,218,0,0" TextWrapping="Wrap" Text="Категория товара:" VerticalAlignment="Top" RenderTransformOrigin="-0.375,-0.537" FontFamily="Arial Black"/>
-        <TextBlock HorizontalAlignment="Left" Margin="10,264,0,0" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="-0.375,-0.537" Text="Колличество товара:" FontFamily="Arial Black"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,134,0,0" TextWrapping="Wrap" Text="{DynamicResource imageCol}" VerticalAlignment="Top" RenderTransformOrigin="-0.375,-0.537" FontFamily="Arial Black"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,176,0,0" TextWrapping="Wrap" Text="{DynamicResource nameCol}" VerticalAlignment="Top" RenderTransformOrigin="-0.375,-0.537" FontFamily="Arial Black"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,218,0,0" TextWrapping="Wrap" Text="{DynamicResource catChange}" VerticalAlignment="Top" RenderTransformOrigin="-0.375,-0.537" FontFamily="Arial Black"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,264,0,0" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="-0.375,-0.537" Text="{DynamicResource qntCol}" FontFamily="Arial Black"/>
         <TextBlock HorizontalAlignment="Left" Margin="10,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" RenderTransformOrigin="-0.375,-0.537"/>
-        <TextBlock HorizontalAlignment="Left" Margin="13,306,0,0" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="-0.375,-0.537" Text="Рейтинг товара:" FontFamily="Arial Black"/>
+        <TextBlock HorizontalAlignment="Left" Margin="13,306,0,0" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="-0.375,-0.537" Text="{DynamicResource rateCol}" FontFamily="Arial Black"/>
         <TextBox x:Name="NameValue" HorizontalAlignment="Left" Margin="10,195,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="304" RenderTransformOrigin="-0.867,-2.065"/>
         <ComboBox x:Name="CatValue" HorizontalAlignment="Left" Margin="10,237,0,0" VerticalAlignment="Top" Width="120">
             <ComboBoxItem Content=""/>
@@ -22,22 +26,24 @@
             <ComboBoxItem Content="Руль"/>
         </ComboBox>
         <TextBox x:Name="QntValue" HorizontalAlignment="Left" Margin="10,283,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" PreviewTextInput="QntValue_PreviewTextInput"/>
-        <Label Content="Описание:" HorizontalAlignment="Left" Margin="10,379,0,0" VerticalAlignment="Top" TextBlock.FontFamily="Arial Black" RenderTransformOrigin="0.508,0.665"/>
+        <Label Content="{DynamicResource descCol}" HorizontalAlignment="Left" Margin="10,379,0,0" VerticalAlignment="Top" TextBlock.FontFamily="Arial Black" RenderTransformOrigin="0.508,0.665"/>
         <TextBox x:Name="DescValue" HorizontalAlignment="Center" Margin="0,408,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="344" Height="93"/>
-        <Button Content="Добавить" HorizontalAlignment="Center" Margin="0,506,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.489,-0.29" Width="160" Height="36" Background="Black" Foreground="White" FontFamily="Arial Black" BorderBrush="#FFCE0A0A" Click="Button_Click"/>
+        <Button Content="{DynamicResource itemAdder}" HorizontalAlignment="Left" Margin="67,506,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.489,-0.29" Width="160" Height="36" Background="Black" Foreground="White" FontFamily="Arial Black" BorderBrush="#FFCE0A0A" Click="Button_Click"/>
         <TextBox x:Name="IdValue" HorizontalAlignment="Left" Margin="10,111,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" PreviewTextInput="IdValue_PreviewTextInput"/>
         <TextBlock HorizontalAlignment="Left" Margin="10,92,0,0" TextWrapping="Wrap" Text="ID" VerticalAlignment="Top" RenderTransformOrigin="-0.375,-0.537" FontFamily="Arial Black"/>
         <TextBox x:Name="CostValue" HorizontalAlignment="Left" Margin="10,361,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" PreviewTextInput="CostValue_PreviewTextInput"/>
-        <TextBlock HorizontalAlignment="Left" Margin="10,347,0,0" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="-0.375,-0.537" Text="Цена:" FontFamily="Arial Black"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,347,0,0" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="-0.375,-0.537" Text="{DynamicResource priceCol}" FontFamily="Arial Black"/>
         <ComboBox x:Name="ImageValue" HorizontalAlignment="Left" Margin="10,153,0,0" VerticalAlignment="Top" Width="304">
             <ComboBoxItem Content=""/>
             <ComboBoxItem Content="C:\\Users\\Влад\\Desktop\\img\\bike1.png"/>
             <ComboBoxItem Content="C:\\Users\\Влад\\Desktop\\img\\bike12.png"/>
             <ComboBoxItem Content="C:\\Users\\Влад\\Desktop\\img\\bike5.png"/>
         </ComboBox>
-        <Slider x:Name="RateValue" HorizontalAlignment="Left" Margin="29,325,0,0" VerticalAlignment="Top" Width="120"/>
+        <Slider x:Name="RateValue" HorizontalAlignment="Left" Margin="29,325,0,0" VerticalAlignment="Top" Width="120" PreviewTextInput="RateValue_PreviewTextInput"/>
         <Label Content="0" HorizontalAlignment="Left" Margin="10,320,0,0" VerticalAlignment="Top"/>
         <Label Content="10" HorizontalAlignment="Left" Margin="149,321,0,0" VerticalAlignment="Top"/>
+        <Button Content="{DynamicResource clearBtn}" HorizontalAlignment="Right" Margin="0,506,27,0" VerticalAlignment="Top" Height="36" Width="70" Background="#FF0F9FA9" Foreground="White" FontFamily="Arial Black" Click="Button_Click_1"/>
+        <Label x:Name="curRate" Content="0" HorizontalAlignment="Left" Margin="112,304,0,0" VerticalAlignment="Top" Foreground="#FFD01212" RenderTransformOrigin="0.364,0.515" FontFamily="Arial Black"/>
 
     </Grid>
 </Window>

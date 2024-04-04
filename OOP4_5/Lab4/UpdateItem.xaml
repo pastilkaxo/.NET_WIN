@@ -6,18 +6,21 @@
         xmlns:local="clr-namespace:Lab4"
         mc:Ignorable="d"
         Title="UpdateItem" Height="506" Width="491" Background="#FF5BCC96" Icon="/cur.png" WindowStartupLocation="CenterScreen" Loaded="Window_Loaded" ResizeMode="NoResize">
+    <Window.Resources>
+        <ResourceDictionary Source="LocalizationRus.xaml" />
+    </Window.Resources>
     <Grid >
         <Label Content="ID" HorizontalAlignment="Left" Margin="10,74,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.671,-0.456" FontFamily="Arial Black"/>
-        <Label Content="Имя" HorizontalAlignment="Left" Margin="10,105,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.671,-0.456" FontFamily="Arial Black"/>
-        <Label Content="Изображение" HorizontalAlignment="Left" Margin="10,136,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.671,-0.456" FontFamily="Arial Black"/>
-        <Label Content="Категория" HorizontalAlignment="Left" Margin="10,167,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.671,-0.456" FontFamily="Arial Black"/>
-        <Label Content="Колличество" HorizontalAlignment="Left" Margin="10,198,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.671,-0.456" FontFamily="Arial Black"/>
-        <Label Content="Рейтинг" HorizontalAlignment="Left" Margin="10,229,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.671,-0.456" FontFamily="Arial Black"/>
-        <Label Content="Описание" HorizontalAlignment="Left" Margin="10,260,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.671,-0.456" FontFamily="Arial Black"/>
-        <TextBox x:Name="nameValue" HorizontalAlignment="Left" Margin="53,108,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="186"/>
+        <Label Content="{DynamicResource nameCol}" HorizontalAlignment="Left" Margin="10,105,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.671,-0.456" FontFamily="Arial Black"/>
+        <Label Content="{DynamicResource imageCol}" HorizontalAlignment="Left" Margin="10,136,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.671,-0.456" FontFamily="Arial Black"/>
+        <Label Content="{DynamicResource catCol}" HorizontalAlignment="Left" Margin="10,167,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.671,-0.456" FontFamily="Arial Black"/>
+        <Label Content="{DynamicResource qntCol}" HorizontalAlignment="Left" Margin="10,198,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.671,-0.456" FontFamily="Arial Black"/>
+        <Label Content="{DynamicResource rateCol}" HorizontalAlignment="Left" Margin="10,229,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.671,-0.456" FontFamily="Arial Black"/>
+        <Label Content="{DynamicResource descCol}" HorizontalAlignment="Left" Margin="10,260,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.671,-0.456" FontFamily="Arial Black"/>
+        <TextBox x:Name="nameValue" HorizontalAlignment="Left" Margin="119,108,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="186"/>
         <TextBox x:Name="qntValue" HorizontalAlignment="Left" Margin="119,201,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" PreviewTextInput="QntValue_PreviewTextInput"/>
         <TextBox x:Name="descValue" HorizontalAlignment="Center" Margin="0,284,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="471" Height="112"/>
-        <Button Content="Изменить" HorizontalAlignment="Center" Margin="0,424,0,0" VerticalAlignment="Top" Height="37" Width="144" Background="#FF7795F1" FontFamily="Arial Black" Click="Button_Click"/>
+        <Button Content="{DynamicResource updateItem}" HorizontalAlignment="Center" Margin="0,424,0,0" VerticalAlignment="Top" Height="37" Width="144" Background="#FF7795F1" FontFamily="Arial Black" Click="Button_Click"/>
         <Label Content="Товар:" HorizontalAlignment="Left" Margin="10,23,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.546,0.392" FontSize="22" FontFamily="Arial Black"/>
         <Label x:Name="SelectedItem" Content="" HorizontalAlignment="Left" Margin="101,30,0,0" VerticalAlignment="Top"/>
         <ComboBox x:Name="catValue" HorizontalAlignment="Left" Margin="119,169,0,0" VerticalAlignment="Top" Width="120">
@@ -27,7 +30,7 @@
             <ComboBoxItem Content="Руль"/>
         </ComboBox>
         <Label x:Name="IdValue" Content="" HorizontalAlignment="Left" Margin="55,72,0,0" VerticalAlignment="Top" FontFamily="Arial Black" Foreground="#FFC50000"/>
-        <Label Content="Цена" HorizontalAlignment="Left" Margin="226,229,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.671,-0.456" FontFamily="Arial Black"/>
+        <Label Content="{DynamicResource priceCol}" HorizontalAlignment="Left" Margin="226,229,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.671,-0.456" FontFamily="Arial Black"/>
         <TextBox x:Name="priceValue" HorizontalAlignment="Left" Margin="295,232,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="88" PreviewTextInput="CostValue_PreviewTextInput"/>
         <Slider x:Name="rateValue" HorizontalAlignment="Left" Margin="86,232,0,0" VerticalAlignment="Top" Width="120"/>
         <ComboBox x:Name="imageValue" HorizontalAlignment="Left" Margin="119,136,0,0" VerticalAlignment="Top" Width="264">

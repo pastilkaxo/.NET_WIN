@@ -18,12 +18,15 @@ namespace Lab4
 
     public partial class Founded : Window
     {
-        public Founded(Product foundedProduct)
+        public Founded(Product foundedProduct, bool eng)
         {
             InitializeComponent();
             this.foundedProduct = foundedProduct;
+            this.eng = eng;
         }
         public Product foundedProduct = new Product();
+
+        public bool eng { get; set; }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
@@ -41,6 +44,15 @@ namespace Lab4
             {
                 var cursor = new Cursor(fs);
                 this.Cursor = cursor;
+            }
+
+            if (eng)
+            {
+                this.Resources = new ResourceDictionary() { Source = new Uri("Localization.xaml", UriKind.Relative) };
+            }
+            else
+            {
+                this.Resources = new ResourceDictionary() { Source = new Uri("LocalizationRus.xaml", UriKind.Relative) };
             }
         }
     }

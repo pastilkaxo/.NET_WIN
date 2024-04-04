@@ -20,17 +20,20 @@ namespace Lab4
     public partial class UpdateItem : Window
     {
        
-        public UpdateItem(Product selectedProduct, ListView listView, List<Product> products)
+        public UpdateItem(Product selectedProduct, ListView listView, List<Product> products, bool eng)
         {
             InitializeComponent();
             this.selectedProduct = selectedProduct;
             this.listView = listView;
             this.Products = products;
+            this.eng = eng;
         }
         public Product selectedProduct { get; set; }
         public ListView listView { get; set; }
 
         public List<Product> Products { get; set; }
+
+        public bool eng { get; set; }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
@@ -50,6 +53,15 @@ namespace Lab4
             {
                 var cursor = new Cursor(fs);
                 this.Cursor = cursor;
+            }
+
+            if (eng)
+            {
+                this.Resources = new ResourceDictionary() { Source = new Uri("Localization.xaml", UriKind.Relative) };
+            }
+            else
+            {
+                this.Resources = new ResourceDictionary() { Source = new Uri("LocalizationRus.xaml", UriKind.Relative) };
             }
 
 

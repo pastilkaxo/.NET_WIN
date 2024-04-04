@@ -33,6 +33,7 @@ namespace Lab4
         public static bool _sorted = false;
         public List<Product> Products { get; set; } =  new List<Product>();
         public List<Product> UnFilteredProducts  = new List<Product>();
+        public bool english = false;
         public MainWindow()
         {
             InitializeComponent();
@@ -216,11 +217,13 @@ namespace Lab4
         private void Image_MouseDown(object sender, MouseButtonEventArgs e)
         {
             this.Resources = new ResourceDictionary() { Source = new Uri("Localization.xaml", UriKind.Relative) };
+            english = true;
         }
 
         private void Image_MouseDown_1(object sender, MouseButtonEventArgs e)
         {
             this.Resources = new ResourceDictionary() { Source = new Uri("LocalizationRus.xaml", UriKind.Relative) };
+            english = false;
         }
 
         private void LoadProductsFromJson(string filePath)
@@ -262,7 +265,7 @@ namespace Lab4
 
         private void CommandBinding_Executed(object sender, ExecutedRoutedEventArgs e)
         {
-            AddItem adder = new AddItem(ProductsListView, Products, UnFilteredProducts);
+            AddItem adder = new AddItem(ProductsListView, Products, UnFilteredProducts,english);
             adder.ShowDialog();
         }
 
@@ -298,7 +301,7 @@ namespace Lab4
             Product selectedProduct = (Product)ProductsListView.SelectedItem;
             if (selectedProduct != null)
             {
-                UpdateItem upd = new UpdateItem(selectedProduct, ProductsListView, Products);
+                UpdateItem upd = new UpdateItem(selectedProduct, ProductsListView, Products,english);
                 upd.ShowDialog();
             }
             else
@@ -320,9 +323,9 @@ namespace Lab4
             {
                 foreach (Product product in Products)
                 {
-                    if (product.Name.ToLower() == SearchText.Text.ToLower())
+                    if (product.Name.ToLower().Contains(SearchText.Text.ToLower()))
                     {
-                        Founded founded = new Founded(product);
+                        Founded founded = new Founded(product,english);
                         founded.ShowDialog();
                         SearchText.Clear();
                         found = true;
@@ -399,8 +402,9 @@ namespace Lab4
                 else
                 {
                     Product selectedProduct = (Product)ProductsListView.SelectedItem;
-                    SelectedItem selectedItem = new SelectedItem(selectedProduct);
+                    SelectedItem selectedItem = new SelectedItem(selectedProduct,Products,ProductsListView,UnFilteredProducts,english);
                     selectedItem.ShowDialog();
+                    ProductsListView.Items.Refresh();
                 }
             }
             catch (NullReferenceException ex)
@@ -416,6 +420,8 @@ namespace Lab4
             page.Show();
             this.Close();
         }
+
+
     }
 
 

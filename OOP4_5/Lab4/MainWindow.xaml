@@ -84,7 +84,7 @@
         <Button x:Name="saveJson" Content="{DynamicResource saveItem}" HorizontalAlignment="Left" Height="33" Margin="10,157,0,0" VerticalAlignment="Top" Width="162" Background="#FF76FF08" FontFamily="Arial Black" BorderBrush="#FFC72828" RenderTransformOrigin="-0.58,0.88" Command="ApplicationCommands.SaveAs"/>
         <Label x:Name="searchPlace" Content="{DynamicResource searchPlace}" HorizontalAlignment="Left" Margin="10,196,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.211,-0.076" FontFamily="Arial Black" Height="24" Width="101"/>
         <Button x:Name="clearBtn" Content="{DynamicResource clearBtn}" HorizontalAlignment="Left" Margin="124,528,0,0" VerticalAlignment="Top" Width="82" Height="33" Background="Black" BorderBrush="#FFCA1515" Foreground="White" FontFamily="Arial Black" Command="ApplicationCommands.Cut" />
-        <Button x:Name="SearchBtn" Content="{DynamicResource searchBtn}" HorizontalAlignment="Left" Margin="209,216,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.543,-0.22" Height="32" Background="#FF08FFD7" Command="ApplicationCommands.Find" Width="38"/>
+        <Button x:Name="SearchBtn" Content="{DynamicResource searchBtn}" HorizontalAlignment="Left" Margin="209,216,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.543,-0.22" Height="32" Background="#FF08FFD7" Command="ApplicationCommands.Find" Width="38" />
         <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="24" Margin="128,107,0,0" VerticalAlignment="Top" Width="24" CornerRadius="50,50,50,50">
             <UIElement.RenderTransform>
                 <TransformGroup>
