@@ -1,0 +1,36 @@
+﻿<ResourceDictionary 
+  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+  xmlns:system="clr-namespace:System;assembly=mscorlib">
+
+    <system:String x:Key="itemAdder">Add</system:String>
+    <system:String x:Key="delItem">Remove</system:String>
+    <system:String x:Key="updateItem">Update</system:String>
+    <system:String x:Key="saveItem">Save to JSON</system:String>
+    <system:String x:Key="searchPlace">Search place:</system:String>
+    <system:String x:Key="catPlace">Category:</system:String>
+    <system:String x:Key="minCost">Minimum cost:</system:String>
+    <system:String x:Key="maxCost">Maximum cost:</system:String>
+    <system:String x:Key="clearBtn">Clear</system:String>
+    <system:String x:Key="filSave">Accept</system:String>
+    <system:String x:Key="searchBtn">Find</system:String>
+
+    <system:String x:Key="imageCol">Image</system:String>
+    <system:String x:Key="nameCol">Name</system:String>
+    <system:String x:Key="catCol">Category</system:String>
+    <system:String x:Key="priceCol">Price</system:String>
+    <system:String x:Key="qntCol">Quantity</system:String>
+    <system:String x:Key="rateCol">Rate</system:String>
+    <system:String x:Key="descCol">Description</system:String>
+    <system:String x:Key="sortLbl">Sort:</system:String>
+    <system:String x:Key="catChange">Choose category:</system:String>
+    <system:String x:Key="backBtn">Back</system:String>
+
+    <system:String x:Key="defBtn">Default</system:String>
+    <system:String x:Key="whiteBtn">White</system:String>
+    <system:String x:Key="blackBtn">Black</system:String>
+    <system:String x:Key="starBtn">Sky</system:String>
+    <system:String x:Key="themeSum">Theme:</system:String>
+    <system:String x:Key="controlBtn">Control Items</system:String>
+
+</ResourceDictionary>

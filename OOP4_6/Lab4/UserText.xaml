@@ -1,0 +1,61 @@
+﻿<UserControl x:Class="Lab4.UserText"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Lab4"
+             mc:Ignorable="d" 
+             d:DesignHeight="750" d:DesignWidth="1438">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+
+            </ResourceDictionary.MergedDictionaries>
+            <Style x:Key="TextStyle" TargetType="Label">
+                <Style.Triggers>
+                    <MultiTrigger>
+                        <MultiTrigger.Conditions>
+                            <Condition Property="IsMouseOver" Value="False"/>
+                        </MultiTrigger.Conditions>
+                        <MultiTrigger.Setters>
+                            <Setter Property="Foreground" Value="#FFEC3737"/>
+                            <Setter Property="Content" Value="Магазин велосипедов | Bike shop"/>
+                        </MultiTrigger.Setters>
+                    </MultiTrigger>
+                    <MultiTrigger>
+                        <MultiTrigger.Conditions>
+                            <Condition Property="IsMouseOver" Value="True"/>
+                        </MultiTrigger.Conditions>
+                        <MultiTrigger.Setters>
+                            <Setter Property="Content" Value="ПОКУПАЙ! ПОКУПАЙ! BUY! BUY!"/>
+                        </MultiTrigger.Setters>
+                    </MultiTrigger>
+                    <EventTrigger RoutedEvent="MouseEnter">
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <ColorAnimation                          
+                            Storyboard.TargetProperty="(Label.Foreground).(SolidColorBrush.Color)"
+                            To="Green" Duration="0:0:0.5"/>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                </Style.Triggers>
+            </Style>
+        </ResourceDictionary>
+    </UserControl.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="21*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="632*"/>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition Width="459*"/>
+            <ColumnDefinition Width="347*"/>
+        </Grid.ColumnDefinitions>
+        <Rectangle Fill="LightPink" RadiusX="15" RadiusY="15"   Panel.ZIndex="-1" Margin="17,39,27,8" Grid.Column="1" Grid.ColumnSpan="2" />
+        <Label x:Name="userTxt" Style="{DynamicResource TextStyle}" HorizontalAlignment="Center" Margin="0,40,0,0" VerticalAlignment="Top" FontFamily="Arial Black" Grid.Column="2" Height="33" Width="314" FontSize="16"/>
+
+    </Grid>
+</UserControl>

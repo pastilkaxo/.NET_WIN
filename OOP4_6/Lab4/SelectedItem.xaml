@@ -1,0 +1,40 @@
+﻿<Window x:Class="Lab4.SelectedItem"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lab4"
+        mc:Ignorable="d"
+        Title="SelectedItem" Height="328" Width="602" ResizeMode="NoResize" Loaded="Window_Loaded" Icon="/cur.png" WindowStartupLocation="CenterScreen"  Style="{DynamicResource DefaultTheme}">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="LocalizationRus.xaml" />
+                <ResourceDictionary Source="DefaultTheme.xaml" />
+                <ResourceDictionary Source="ButtonTemplate.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    <Grid>
+        <Label Content="{DynamicResource nameCol}" Style="{DynamicResource LabStyle}" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+        <Label Content="{DynamicResource priceCol}" Style="{DynamicResource LabStyle}" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top"/>
+        <Label Content="{DynamicResource catCol}" Style="{DynamicResource LabStyle}" HorizontalAlignment="Left" Margin="10,72,0,0" VerticalAlignment="Top"/>
+        <Label Content="{DynamicResource qntCol}" Style="{DynamicResource LabStyle}" HorizontalAlignment="Left" Margin="10,103,0,0" VerticalAlignment="Top"/>
+        <Label Content="{DynamicResource rateCol}" Style="{DynamicResource LabStyle}" HorizontalAlignment="Left" Margin="10,134,0,0" VerticalAlignment="Top"/>
+        <Label Content="ID" Style="{DynamicResource LabStyle}" HorizontalAlignment="Left" Margin="10,165,0,0" VerticalAlignment="Top"/>
+        <Label Content="{DynamicResource descCol}" Style="{DynamicResource LabStyle}" HorizontalAlignment="Left" Margin="10,196,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="Name" Style="{DynamicResource LabStyle}" Content="Имя" HorizontalAlignment="Left" Margin="92,10,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="Cost" Style="{DynamicResource LabStyle}" Content="Имя" HorizontalAlignment="Left" Margin="92,41,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="Cat" Style="{DynamicResource LabStyle}" Content="Имя" HorizontalAlignment="Left" Margin="92,72,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="Count" Style="{DynamicResource LabStyle}" Content="Имя" HorizontalAlignment="Left" Margin="92,103,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="Rate" Style="{DynamicResource LabStyle}" Content="Имя" HorizontalAlignment="Left" Margin="92,134,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="Id" Style="{DynamicResource LabStyle}" Content="Имя" HorizontalAlignment="Left" Margin="92,165,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="Desc" Style="{DynamicResource LabStyle}" Content="Имя" HorizontalAlignment="Left" Margin="92,196,0,0" VerticalAlignment="Top"/>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="163" Margin="301,34,0,0" VerticalAlignment="Top" Width="184">
+            <Image x:Name="itemImage"/>
+        </Border>
+        <Button Content="{DynamicResource delItem}" HorizontalAlignment="Left" Margin="301,209,0,0" VerticalAlignment="Top" Click="Button_Click" Background="#FF8996FF" Height="40" Width="56" Foreground="#FFFBFBFB" FontFamily="Segoe UI Black"/>
+        <Button Content="{DynamicResource updateItem}" HorizontalAlignment="Left" Margin="362,209,0,0" VerticalAlignment="Top" Click="Button_Click_1" Width="123" Height="40" Background="#FF8996FF" Foreground="White" FontFamily="Segoe UI Black" FontSize="14" />
+
+    </Grid>
+</Window>
