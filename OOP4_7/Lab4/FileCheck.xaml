@@ -1,0 +1,13 @@
+﻿<Window x:Class="Lab4.FileCheck"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lab4"
+        mc:Ignorable="d"
+        Title="FileCheck" Height="630" Width="302" Background="#FFE22121" ResizeMode="NoResize" Icon="/cur.png" Loaded="Window_Loaded" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <TextBox x:Name="fileValue" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Center" Width="218" Height="531" IsEnabled="False" TextAlignment="Center"/>
+
+    </Grid>
+</Window>
