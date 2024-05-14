@@ -23,6 +23,8 @@ namespace ООП9
         BankContext db;
         Owner owner;
         ClientCheck check;
+        IEnumerable<object> allData;
+
         public MainWindow()
         {
             InitializeComponent();
@@ -57,6 +59,7 @@ namespace ООП9
             NewType.SelectedIndex = -1;
             NewBalance.Clear();
             NewClient.Clear();
+            PrevNumber.Clear();
         }
 
 
@@ -128,52 +131,71 @@ namespace ООП9
         private void AddOwner_Click(object sender, RoutedEventArgs e)
         {
 
+            try
+            {
                 if (ValidateBirthDate(Birth) && ValidateOwnerData())
                 {
                     int pNumber = Convert.ToInt32(PassNum.Text);
                     bool isUnique = db.Owners.Any(o => o.PassportNumber == pNumber);
-                if (!isUnique && PassNum.Text.Length == 7 )
-                {
-                    owner = new Owner()
+                    if (!isUnique && PassNum.Text.Length == 7)
                     {
-                        Name = Name.Text,
-                        Surname = Surname.Text,
-                        Fathername = Fathername.Text,
-                        Birth = Convert.ToDateTime(Birth.Text),
-                        PassportSeries = PassSeries.Text,
-                        PassportNumber = Convert.ToInt32(PassNum.Text)
-                    };
+                        owner = new Owner()
+                        {
+                            Name = Name.Text,
+                            Surname = Surname.Text,
+                            Fathername = Fathername.Text,
+                            Birth = Convert.ToDateTime(Birth.Text),
+                            PassportSeries = PassSeries.Text,
+                            PassportNumber = Convert.ToInt32(PassNum.Text)
+                        };                        
 
-                    db.Owners.Add(owner);
-                    db.SaveChanges();
-                    db.Owners.Load();
-                    dataView.ItemsSource = db.Owners.Local.ToBindingList();
-                    ClearOwner();
+                        using(var unitOfWork = new UnitOfWork())
+                        {
+                            var owners = unitOfWork.Owners;
+                            owners.Add(owner);
+                            unitOfWork.Save();
+                            dataView.ItemsSource = owners.GetAll();
+                            ClearOwner();
+                        }
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Введенный PassportNumber существует/не корректен!");
+                    }
                 }
-                else
-                {
-                    MessageBox.Show("Введенный PassportNumber существует/не корректен!");
-                }
-            }
                 else
                 {
                     MessageBox.Show("Данные не введены!");
                 }
-            
+            }
+            catch(FormatException)
+            {
+                MessageBox.Show("Неверный формат");
+
+            }
+
         }
 
-        private async void GetAllOwners_Click(object sender, RoutedEventArgs e)
+        private void GetAllOwners_Click(object sender, RoutedEventArgs e)
         {
+            using(var unitOfWork = new UnitOfWork())
+            {
+                allData = unitOfWork.Owners.GetAll();
+                dataView.ItemsSource = allData;
+            }
 
-            var allOwners = await db.Owners.SqlQuery("begin tran SELECT * FROM Owners; commit tran;").ToListAsync();
-            dataView.ItemsSource = allOwners;
         
         }
 
-        private async void GetAllChecks_Click(object sender, RoutedEventArgs e)
+        private  void GetAllChecks_Click(object sender, RoutedEventArgs e)
         {
-            var allChecks = await db.Checks.SqlQuery("begin tran SELECT * FROM ClientChecks; commit tran;").ToListAsync();
-            dataView.ItemsSource = allChecks;
+            using(var unitOfWork = new UnitOfWork())
+            {
+                allData = unitOfWork.ClientChecks.GetAll();
+                dataView.ItemsSource = allData;
+
+            }
         }
 
         private void ValidateBalance(object sender, TextCompositionEventArgs e)
@@ -191,6 +213,8 @@ namespace ООП9
 
         private void AddCheck_Click(object sender, RoutedEventArgs e)
         {
+            try
+            {
                 if (ValidateCheckData())
                 {
                     int clientId = Convert.ToInt32(Client.Text);
@@ -205,10 +229,15 @@ namespace ООП9
                             ClientID = clientId,
                         };
 
-                        db.Checks.Add(check);
-                        db.SaveChanges();
-                        dataView.ItemsSource = db.Checks.Local.ToBindingList();
-                        ClearCheck();
+
+                        using (var unitOfWork = new UnitOfWork())
+                        {
+                            var checks = unitOfWork.ClientChecks;
+                            checks.Add(check);
+                            unitOfWork.Save();
+                            dataView.ItemsSource = checks.GetAll();
+                            ClearCheck();
+                        }
                     }
                     else
                     {
@@ -219,7 +248,13 @@ namespace ООП9
                 {
                     MessageBox.Show("Введены не все данные!");
                 }
-  
+            }
+            catch(FormatException) 
+            {
+                MessageBox.Show("Неверный формат");
+
+            }
+
         }
 
         private async void FindOwner_Click(object sender, RoutedEventArgs e)
@@ -315,7 +350,7 @@ namespace ООП9
             dataView.ItemsSource = owners;
         }
 
-        private void DelOwner_Click(object sender, RoutedEventArgs e)
+        private async void DelOwner_Click(object sender, RoutedEventArgs e)
         {
             try
             {
@@ -324,7 +359,7 @@ namespace ООП9
                 OwnerID.Clear();
                 var allOwners = db.Owners.SqlQuery("begin tran SELECT * FROM Owners; commit tran;").ToList();
                 dataView.ItemsSource = allOwners;
-                db.SaveChanges();
+                await db.SaveChangesAsync();
 
             }
             catch (FormatException)
@@ -333,13 +368,13 @@ namespace ООП9
             }
         }
 
-        private void DelCheck_Click(object sender, RoutedEventArgs e)
+        private async void DelCheck_Click(object sender, RoutedEventArgs e)
         {
             try
             {
                 var parameter = new SqlParameter("@Number", CheckID.Text);
                 var checks = db.Checks.SqlQuery("begin tran DELETE FROM ClientChecks WHERE Number = @Number; commit tran;", parameter).ToList();
-                db.SaveChanges();
+                await db.SaveChangesAsync();
 
             }
             catch
@@ -352,35 +387,42 @@ namespace ООП9
 
         private void UpdateOwner_Click(object sender, RoutedEventArgs e)
         {
-            if(PrevOwner != null && !string.IsNullOrEmpty(PrevOwner.Text))
+            try
             {
-                Owner ownerToUpdate = db.Owners.Find(Convert.ToInt32(PrevOwner.Text));
-                if(ownerToUpdate != null)
+                if (PrevOwner != null && !string.IsNullOrEmpty(PrevOwner.Text))
                 {
-                    ownerToUpdate.Name = !string.IsNullOrEmpty(NewName.Text) ? NewName.Text : ownerToUpdate.Name;
-                    ownerToUpdate.Surname = !string.IsNullOrEmpty(NewSurname.Text) ? NewSurname.Text : ownerToUpdate.Surname;
-                    ownerToUpdate.Fathername = !string.IsNullOrEmpty(NewFathername.Text) ? NewFathername.Text : ownerToUpdate.Fathername;
-                    if (!string.IsNullOrEmpty(NewBirth.Text))
+                    Owner ownerToUpdate = db.Owners.Find(Convert.ToInt32(PrevOwner.Text));
+                    if (ownerToUpdate != null)
                     {
-                        ownerToUpdate.Birth = Convert.ToDateTime(NewBirth.Text);
-                    }
-                    ownerToUpdate.PassportSeries = !string.IsNullOrEmpty(NewPassSeries.Text) ? NewPassSeries.Text : ownerToUpdate.PassportSeries;
-                    if (!string.IsNullOrEmpty(NewPassNum.Text))
-                    {
-                        ownerToUpdate.PassportNumber = Convert.ToInt32(NewPassNum.Text);
-                    }
+                        ownerToUpdate.Name = !string.IsNullOrEmpty(NewName.Text) ? NewName.Text : ownerToUpdate.Name;
+                        ownerToUpdate.Surname = !string.IsNullOrEmpty(NewSurname.Text) ? NewSurname.Text : ownerToUpdate.Surname;
+                        ownerToUpdate.Fathername = !string.IsNullOrEmpty(NewFathername.Text) ? NewFathername.Text : ownerToUpdate.Fathername;
+                        if (!string.IsNullOrEmpty(NewBirth.Text))
+                        {
+                            ownerToUpdate.Birth = Convert.ToDateTime(NewBirth.Text);
+                        }
+                        ownerToUpdate.PassportSeries = !string.IsNullOrEmpty(NewPassSeries.Text) ? NewPassSeries.Text : ownerToUpdate.PassportSeries;
+                        if (!string.IsNullOrEmpty(NewPassNum.Text))
+                        {
+                            ownerToUpdate.PassportNumber = Convert.ToInt32(NewPassNum.Text);
+                        }
 
-                    db.SaveChanges();
-                    ClearOwner();
+                        db.SaveChanges();
+                        ClearOwner();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Владелец не найден!");
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Владелец не найден!");
+                    MessageBox.Show("Введите номер владельца!");
                 }
             }
-            else
+            catch (FormatException)
             {
-                MessageBox.Show("Введите номер владельца!");
+                MessageBox.Show("Неверный формат!");
             }
         }
 

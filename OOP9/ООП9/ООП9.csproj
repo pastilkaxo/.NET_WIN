@@ -67,6 +67,8 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Repository.cs" />
+    <Compile Include="UnitOfWork.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -77,15 +79,16 @@
     </Compile>
     <Compile Include="BankContext.cs" />
     <Compile Include="ClientCheck.cs" />
+    <Compile Include="IRepository.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Migrations\202405141451290_InitialCreate.cs" />
-    <Compile Include="Migrations\202405141451290_InitialCreate.Designer.cs">
-      <DependentUpon>202405141451290_InitialCreate.cs</DependentUpon>
+    <Compile Include="Migrations\202405142128054_InitialCreate.cs" />
+    <Compile Include="Migrations\202405142128054_InitialCreate.Designer.cs">
+      <DependentUpon>202405142128054_InitialCreate.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Owner.cs" />
@@ -102,8 +105,8 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <EmbeddedResource Include="Migrations\202405141451290_InitialCreate.resx">
-      <DependentUpon>202405141451290_InitialCreate.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202405142128054_InitialCreate.resx">
+      <DependentUpon>202405142128054_InitialCreate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

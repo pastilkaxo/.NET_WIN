@@ -22,18 +22,21 @@ namespace ООП9
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-
             modelBuilder.Entity<Owner>()
                 .Property(e => e.PassportNumber)
                 .IsRequired()
                 .HasColumnAnnotation("Index", new IndexAnnotation(new IndexAttribute { IsUnique = true }));
 
+            modelBuilder.Entity<ClientCheck>()
+               .HasRequired(c => c.Owner)
+               .WithMany()
+               .HasForeignKey(c => c.ClientID);
         }
 
         public void DeleteOwner(int id)
         {
             var parameter = new SqlParameter("@ownerId", id);
-            Database.ExecuteSqlCommand("exec DeleteOwner @ownerId", parameter);
+             Database.ExecuteSqlCommand("exec DeleteOwner @ownerId", parameter);
         }
 
     }
