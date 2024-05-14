@@ -1,35 +1,41 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\\u0412\u043B\u0430\u0434\\source\\repos\\\u041E\u041E\u041F9\\",
+  "WorkspaceRootPath": "C:\\Users\\\u0412\u043B\u0430\u0434\\Desktop\\\u041E\u041E\u041F\\\u041B\u0430\u0431\u044B\u041E\u041E\u041F\\OOP9\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9436547A-6007-4B46-91F1-1C55E3CA93B4}|\u041E\u041E\u041F9\\\u041E\u041E\u041F9.csproj|c:\\users\\\u0432\u043B\u0430\u0434\\source\\repos\\\u043E\u043E\u043F9\\\u043E\u043E\u043F9\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9436547A-6007-4B46-91F1-1C55E3CA93B4}|\u041E\u041E\u041F9\\\u041E\u041E\u041F9.csproj|solutionrelative:\u043E\u043E\u043F9\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9436547A-6007-4B46-91F1-1C55E3CA93B4}|\u041E\u041E\u041F9\\\u041E\u041E\u041F9.csproj|C:\\Users\\\u0412\u043B\u0430\u0434\\source\\repos\\\u041E\u041E\u041F9\\\u043E\u043E\u043F9\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{9436547A-6007-4B46-91F1-1C55E3CA93B4}|\u041E\u041E\u041F9\\\u041E\u041E\u041F9.csproj|solutionrelative:\u043E\u043E\u043F9\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\\u0412\u043B\u0430\u0434\\AppData\\Local\\SourceServer\\be256fac9629c7b6e3161832337eb7c67e60792f57017652179fd157bac5ad19\\src\\EntityFramework\\Internal\\InternalContext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9436547A-6007-4B46-91F1-1C55E3CA93B4}|\u041E\u041E\u041F9\\\u041E\u041E\u041F9.csproj|C:\\Users\\\u0412\u043B\u0430\u0434\\source\\repos\\\u041E\u041E\u041F9\\\u043E\u043E\u043F9\\bankcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{9436547A-6007-4B46-91F1-1C55E3CA93B4}|\u041E\u041E\u041F9\\\u041E\u041E\u041F9.csproj|c:\\users\\\u0432\u043B\u0430\u0434\\desktop\\\u043E\u043E\u043F\\\u043B\u0430\u0431\u044B\u043E\u043E\u043F\\oop9\\\u043E\u043E\u043F9\\bankcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9436547A-6007-4B46-91F1-1C55E3CA93B4}|\u041E\u041E\u041F9\\\u041E\u041E\u041F9.csproj|solutionrelative:\u043E\u043E\u043F9\\bankcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\\u0412\u043B\u0430\u0434\\AppData\\Local\\SourceServer\\cb417bd2991c4bda4c46a9a56992760597e0a08c98b6e0a1da0be93033115905\\src\\EntityFramework\\Core\\Query\\InternalTrees\\columnmapfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9436547A-6007-4B46-91F1-1C55E3CA93B4}|\u041E\u041E\u041F9\\\u041E\u041E\u041F9.csproj|C:\\Users\\\u0412\u043B\u0430\u0434\\Desktop\\\u041E\u041E\u041F\\\u041B\u0430\u0431\u044B\u041E\u041E\u041F\\OOP9\\\u043E\u043E\u043F9\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9436547A-6007-4B46-91F1-1C55E3CA93B4}|\u041E\u041E\u041F9\\\u041E\u041E\u041F9.csproj|solutionrelative:\u043E\u043E\u043F9\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9436547A-6007-4B46-91F1-1C55E3CA93B4}|\u041E\u041E\u041F9\\\u041E\u041E\u041F9.csproj|C:\\Users\\\u0412\u043B\u0430\u0434\\source\\repos\\\u041E\u041E\u041F9\\\u043E\u043E\u043F9\\migrations\\configuration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{9436547A-6007-4B46-91F1-1C55E3CA93B4}|\u041E\u041E\u041F9\\\u041E\u041E\u041F9.csproj|C:\\Users\\\u0412\u043B\u0430\u0434\\Desktop\\\u041E\u041E\u041F\\\u041B\u0430\u0431\u044B\u041E\u041E\u041F\\OOP9\\\u043E\u043E\u043F9\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9436547A-6007-4B46-91F1-1C55E3CA93B4}|\u041E\u041E\u041F9\\\u041E\u041E\u041F9.csproj|solutionrelative:\u043E\u043E\u043F9\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9436547A-6007-4B46-91F1-1C55E3CA93B4}|\u041E\u041E\u041F9\\\u041E\u041E\u041F9.csproj|C:\\Users\\\u0412\u043B\u0430\u0434\\Desktop\\\u041E\u041E\u041F\\\u041B\u0430\u0431\u044B\u041E\u041E\u041F\\OOP9\\\u043E\u043E\u043F9\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9436547A-6007-4B46-91F1-1C55E3CA93B4}|\u041E\u041E\u041F9\\\u041E\u041E\u041F9.csproj|solutionrelative:\u043E\u043E\u043F9\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9436547A-6007-4B46-91F1-1C55E3CA93B4}|\u041E\u041E\u041F9\\\u041E\u041E\u041F9.csproj|C:\\Users\\\u0412\u043B\u0430\u0434\\Desktop\\\u041E\u041E\u041F\\\u041B\u0430\u0431\u044B\u041E\u041E\u041F\\OOP9\\\u043E\u043E\u043F9\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{9436547A-6007-4B46-91F1-1C55E3CA93B4}|\u041E\u041E\u041F9\\\u041E\u041E\u041F9.csproj|solutionrelative:\u043E\u043E\u043F9\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9436547A-6007-4B46-91F1-1C55E3CA93B4}|\u041E\u041E\u041F9\\\u041E\u041E\u041F9.csproj|C:\\Users\\\u0412\u043B\u0430\u0434\\Desktop\\\u041E\u041E\u041F\\\u041B\u0430\u0431\u044B\u041E\u041E\u041F\\OOP9\\\u043E\u043E\u043F9\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9436547A-6007-4B46-91F1-1C55E3CA93B4}|\u041E\u041E\u041F9\\\u041E\u041E\u041F9.csproj|solutionrelative:\u043E\u043E\u043F9\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9436547A-6007-4B46-91F1-1C55E3CA93B4}|\u041E\u041E\u041F9\\\u041E\u041E\u041F9.csproj|C:\\Users\\\u0412\u043B\u0430\u0434\\Desktop\\\u041E\u041E\u041F\\\u041B\u0430\u0431\u044B\u041E\u041E\u041F\\OOP9\\\u043E\u043E\u043F9\\migrations\\configuration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9436547A-6007-4B46-91F1-1C55E3CA93B4}|\u041E\u041E\u041F9\\\u041E\u041E\u041F9.csproj|solutionrelative:\u043E\u043E\u043F9\\migrations\\configuration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9436547A-6007-4B46-91F1-1C55E3CA93B4}|\u041E\u041E\u041F9\\\u041E\u041E\u041F9.csproj|C:\\Users\\\u0412\u043B\u0430\u0434\\source\\repos\\\u041E\u041E\u041F9\\\u043E\u043E\u043F9\\clientcheck.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{9436547A-6007-4B46-91F1-1C55E3CA93B4}|\u041E\u041E\u041F9\\\u041E\u041E\u041F9.csproj|C:\\Users\\\u0412\u043B\u0430\u0434\\Desktop\\\u041E\u041E\u041F\\\u041B\u0430\u0431\u044B\u041E\u041E\u041F\\OOP9\\\u043E\u043E\u043F9\\clientcheck.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9436547A-6007-4B46-91F1-1C55E3CA93B4}|\u041E\u041E\u041F9\\\u041E\u041E\u041F9.csproj|solutionrelative:\u043E\u043E\u043F9\\clientcheck.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9436547A-6007-4B46-91F1-1C55E3CA93B4}|\u041E\u041E\u041F9\\\u041E\u041E\u041F9.csproj|C:\\Users\\\u0412\u043B\u0430\u0434\\source\\repos\\\u041E\u041E\u041F9\\\u043E\u043E\u043F9\\owner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{9436547A-6007-4B46-91F1-1C55E3CA93B4}|\u041E\u041E\u041F9\\\u041E\u041E\u041F9.csproj|C:\\Users\\\u0412\u043B\u0430\u0434\\Desktop\\\u041E\u041E\u041F\\\u041B\u0430\u0431\u044B\u041E\u041E\u041F\\OOP9\\\u043E\u043E\u043F9\\owner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9436547A-6007-4B46-91F1-1C55E3CA93B4}|\u041E\u041E\u041F9\\\u041E\u041E\u041F9.csproj|solutionrelative:\u043E\u043E\u043F9\\owner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -40,7 +46,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 10,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -56,99 +62,111 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "InternalContext.cs",
-              "DocumentMoniker": "C:\\Users\\\u0412\u043B\u0430\u0434\\AppData\\Local\\SourceServer\\be256fac9629c7b6e3161832337eb7c67e60792f57017652179fd157bac5ad19\\src\\EntityFramework\\Internal\\InternalContext.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\AppData\\Local\\SourceServer\\be256fac9629c7b6e3161832337eb7c67e60792f57017652179fd157bac5ad19\\src\\EntityFramework\\Internal\\InternalContext.cs",
-              "ToolTip": "C:\\Users\\\u0412\u043B\u0430\u0434\\AppData\\Local\\SourceServer\\be256fac9629c7b6e3161832337eb7c67e60792f57017652179fd157bac5ad19\\src\\EntityFramework\\Internal\\InternalContext.cs",
-              "RelativeToolTip": "..\\..\\..\\AppData\\Local\\SourceServer\\be256fac9629c7b6e3161832337eb7c67e60792f57017652179fd157bac5ad19\\src\\EntityFramework\\Internal\\InternalContext.cs",
-              "ViewState": "AQIAAKcBAAAAAAAAAIAwwLgBAAAQAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-14T19:22:13.628Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "columnmapfactory.cs",
-              "DocumentMoniker": "C:\\Users\\\u0412\u043B\u0430\u0434\\AppData\\Local\\SourceServer\\cb417bd2991c4bda4c46a9a56992760597e0a08c98b6e0a1da0be93033115905\\src\\EntityFramework\\Core\\Query\\InternalTrees\\columnmapfactory.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\AppData\\Local\\SourceServer\\cb417bd2991c4bda4c46a9a56992760597e0a08c98b6e0a1da0be93033115905\\src\\EntityFramework\\Core\\Query\\InternalTrees\\columnmapfactory.cs",
-              "ToolTip": "C:\\Users\\\u0412\u043B\u0430\u0434\\AppData\\Local\\SourceServer\\cb417bd2991c4bda4c46a9a56992760597e0a08c98b6e0a1da0be93033115905\\src\\EntityFramework\\Core\\Query\\InternalTrees\\columnmapfactory.cs",
-              "RelativeToolTip": "..\\..\\..\\AppData\\Local\\SourceServer\\cb417bd2991c4bda4c46a9a56992760597e0a08c98b6e0a1da0be93033115905\\src\\EntityFramework\\Core\\Query\\InternalTrees\\columnmapfactory.cs",
-              "ViewState": "AQIAAEEBAAAAAAAAAIAwwFEBAAAQAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-14T19:03:25.788Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Configuration.cs",
-              "DocumentMoniker": "C:\\Users\\\u0412\u043B\u0430\u0434\\source\\repos\\\u041E\u041E\u041F9\\\u041E\u041E\u041F9\\Migrations\\Configuration.cs",
-              "RelativeDocumentMoniker": "\u041E\u041E\u041F9\\Migrations\\Configuration.cs",
-              "ToolTip": "C:\\Users\\\u0412\u043B\u0430\u0434\\source\\repos\\\u041E\u041E\u041F9\\\u041E\u041E\u041F9\\Migrations\\Configuration.cs",
-              "RelativeToolTip": "\u041E\u041E\u041F9\\Migrations\\Configuration.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-14T14:51:19.201Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "ClientCheck.cs",
-              "DocumentMoniker": "C:\\Users\\\u0412\u043B\u0430\u0434\\source\\repos\\\u041E\u041E\u041F9\\\u041E\u041E\u041F9\\ClientCheck.cs",
+              "DocumentMoniker": "C:\\Users\\\u0412\u043B\u0430\u0434\\Desktop\\\u041E\u041E\u041F\\\u041B\u0430\u0431\u044B\u041E\u041E\u041F\\OOP9\\\u041E\u041E\u041F9\\ClientCheck.cs",
               "RelativeDocumentMoniker": "\u041E\u041E\u041F9\\ClientCheck.cs",
-              "ToolTip": "C:\\Users\\\u0412\u043B\u0430\u0434\\source\\repos\\\u041E\u041E\u041F9\\\u041E\u041E\u041F9\\ClientCheck.cs",
+              "ToolTip": "C:\\Users\\\u0412\u043B\u0430\u0434\\Desktop\\\u041E\u041E\u041F\\\u041B\u0430\u0431\u044B\u041E\u041E\u041F\\OOP9\\\u041E\u041E\u041F9\\ClientCheck.cs",
               "RelativeToolTip": "\u041E\u041E\u041F9\\ClientCheck.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAApAAAA",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABUAAAApAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-14T11:14:25.223Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "Owner.cs",
-              "DocumentMoniker": "C:\\Users\\\u0412\u043B\u0430\u0434\\source\\repos\\\u041E\u041E\u041F9\\\u041E\u041E\u041F9\\Owner.cs",
+              "DocumentMoniker": "C:\\Users\\\u0412\u043B\u0430\u0434\\Desktop\\\u041E\u041E\u041F\\\u041B\u0430\u0431\u044B\u041E\u041E\u041F\\OOP9\\\u041E\u041E\u041F9\\Owner.cs",
               "RelativeDocumentMoniker": "\u041E\u041E\u041F9\\Owner.cs",
-              "ToolTip": "C:\\Users\\\u0412\u043B\u0430\u0434\\source\\repos\\\u041E\u041E\u041F9\\\u041E\u041E\u041F9\\Owner.cs",
+              "ToolTip": "C:\\Users\\\u0412\u043B\u0430\u0434\\Desktop\\\u041E\u041E\u041F\\\u041B\u0430\u0431\u044B\u041E\u041E\u041F\\OOP9\\\u041E\u041E\u041F9\\Owner.cs",
               "RelativeToolTip": "\u041E\u041E\u041F9\\Owner.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAAB8AAAAAAAAA",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAABgAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-14T11:11:24.634Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "BankContext.cs",
-              "DocumentMoniker": "C:\\Users\\\u0412\u043B\u0430\u0434\\source\\repos\\\u041E\u041E\u041F9\\\u041E\u041E\u041F9\\BankContext.cs",
-              "RelativeDocumentMoniker": "\u041E\u041E\u041F9\\BankContext.cs",
-              "ToolTip": "C:\\Users\\\u0412\u043B\u0430\u0434\\source\\repos\\\u041E\u041E\u041F9\\\u041E\u041E\u041F9\\BankContext.cs",
-              "RelativeToolTip": "\u041E\u041E\u041F9\\BankContext.cs",
-              "ViewState": "AQIAABMAAAAAAAAAAIA7wB4AAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-14T11:03:35.265Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "MainWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\\u0412\u043B\u0430\u0434\\source\\repos\\\u041E\u041E\u041F9\\\u041E\u041E\u041F9\\MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\\u0412\u043B\u0430\u0434\\Desktop\\\u041E\u041E\u041F\\\u041B\u0430\u0431\u044B\u041E\u041E\u041F\\OOP9\\\u041E\u041E\u041F9\\MainWindow.xaml",
               "RelativeDocumentMoniker": "\u041E\u041E\u041F9\\MainWindow.xaml",
-              "ToolTip": "C:\\Users\\\u0412\u043B\u0430\u0434\\source\\repos\\\u041E\u041E\u041F9\\\u041E\u041E\u041F9\\MainWindow.xaml",
+              "ToolTip": "C:\\Users\\\u0412\u043B\u0430\u0434\\Desktop\\\u041E\u041E\u041F\\\u041B\u0430\u0431\u044B\u041E\u041E\u041F\\OOP9\\\u041E\u041E\u041F9\\MainWindow.xaml",
               "RelativeToolTip": "\u041E\u041E\u041F9\\MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2024-05-14T10:54:35.646Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "MainWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\\u0412\u043B\u0430\u0434\\source\\repos\\\u041E\u041E\u041F9\\\u041E\u041E\u041F9\\MainWindow.xaml.cs",
-              "RelativeDocumentMoniker": "\u041E\u041E\u041F9\\MainWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\\u0412\u043B\u0430\u0434\\source\\repos\\\u041E\u041E\u041F9\\\u041E\u041E\u041F9\\MainWindow.xaml.cs",
-              "RelativeToolTip": "\u041E\u041E\u041F9\\MainWindow.xaml.cs",
-              "ViewState": "AQIAAHEBAAAAAAAAAAAewH8BAAANAAAA",
+              "DocumentIndex": 2,
+              "Title": "Repository.cs",
+              "DocumentMoniker": "C:\\Users\\\u0412\u043B\u0430\u0434\\Desktop\\\u041E\u041E\u041F\\\u041B\u0430\u0431\u044B\u041E\u041E\u041F\\OOP9\\\u041E\u041E\u041F9\\Repository.cs",
+              "RelativeDocumentMoniker": "\u041E\u041E\u041F9\\Repository.cs",
+              "ToolTip": "C:\\Users\\\u0412\u043B\u0430\u0434\\Desktop\\\u041E\u041E\u041F\\\u041B\u0430\u0431\u044B\u041E\u041E\u041F\\OOP9\\\u041E\u041E\u041F9\\Repository.cs",
+              "RelativeToolTip": "\u041E\u041E\u041F9\\Repository.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAmwCAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-14T09:09:32.393Z",
+              "WhenOpened": "2024-05-14T22:35:48.274Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UnitOfWork.cs",
+              "DocumentMoniker": "C:\\Users\\\u0412\u043B\u0430\u0434\\Desktop\\\u041E\u041E\u041F\\\u041B\u0430\u0431\u044B\u041E\u041E\u041F\\OOP9\\\u041E\u041E\u041F9\\UnitOfWork.cs",
+              "RelativeDocumentMoniker": "\u041E\u041E\u041F9\\UnitOfWork.cs",
+              "ToolTip": "C:\\Users\\\u0412\u043B\u0430\u0434\\Desktop\\\u041E\u041E\u041F\\\u041B\u0430\u0431\u044B\u041E\u041E\u041F\\OOP9\\\u041E\u041E\u041F9\\UnitOfWork.cs",
+              "RelativeToolTip": "\u041E\u041E\u041F9\\UnitOfWork.cs",
+              "ViewState": "AQIAACUAAAAAAAAAAADwvxcAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-14T22:54:20.1Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "BankContext.cs",
+              "DocumentMoniker": "C:\\Users\\\u0412\u043B\u0430\u0434\\Desktop\\\u041E\u041E\u041F\\\u041B\u0430\u0431\u044B\u041E\u041E\u041F\\OOP9\\\u041E\u041E\u041F9\\BankContext.cs",
+              "RelativeDocumentMoniker": "\u041E\u041E\u041F9\\BankContext.cs",
+              "ToolTip": "C:\\Users\\\u0412\u043B\u0430\u0434\\Desktop\\\u041E\u041E\u041F\\\u041B\u0430\u0431\u044B\u041E\u041E\u041F\\OOP9\\\u041E\u041E\u041F9\\BankContext.cs",
+              "RelativeToolTip": "\u041E\u041E\u041F9\\BankContext.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAAA0wCIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-14T11:03:35.265Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\\u0412\u043B\u0430\u0434\\Desktop\\\u041E\u041E\u041F\\\u041B\u0430\u0431\u044B\u041E\u041E\u041F\\OOP9\\\u041E\u041E\u041F9\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "\u041E\u041E\u041F9\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\\u0412\u043B\u0430\u0434\\Desktop\\\u041E\u041E\u041F\\\u041B\u0430\u0431\u044B\u041E\u041E\u041F\\OOP9\\\u041E\u041E\u041F9\\MainWindow.xaml.cs",
+              "RelativeToolTip": "\u041E\u041E\u041F9\\MainWindow.xaml.cs",
+              "ViewState": "AQIAAIoAAAAAAAAAAAAIwKQAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-14T09:09:32.393Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Configuration.cs",
+              "DocumentMoniker": "C:\\Users\\\u0412\u043B\u0430\u0434\\Desktop\\\u041E\u041E\u041F\\\u041B\u0430\u0431\u044B\u041E\u041E\u041F\\OOP9\\\u041E\u041E\u041F9\\Migrations\\Configuration.cs",
+              "RelativeDocumentMoniker": "\u041E\u041E\u041F9\\Migrations\\Configuration.cs",
+              "ToolTip": "C:\\Users\\\u0412\u043B\u0430\u0434\\Desktop\\\u041E\u041E\u041F\\\u041B\u0430\u0431\u044B\u041E\u041E\u041F\\OOP9\\\u041E\u041E\u041F9\\Migrations\\Configuration.cs",
+              "RelativeToolTip": "\u041E\u041E\u041F9\\Migrations\\Configuration.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAABLAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-14T21:27:02.889Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "IRepository.cs",
+              "DocumentMoniker": "C:\\Users\\\u0412\u043B\u0430\u0434\\Desktop\\\u041E\u041E\u041F\\\u041B\u0430\u0431\u044B\u041E\u041E\u041F\\OOP9\\\u041E\u041E\u041F9\\IRepository.cs",
+              "RelativeDocumentMoniker": "\u041E\u041E\u041F9\\IRepository.cs",
+              "ToolTip": "C:\\Users\\\u0412\u043B\u0430\u0434\\Desktop\\\u041E\u041E\u041F\\\u041B\u0430\u0431\u044B\u041E\u041E\u041F\\OOP9\\\u041E\u041E\u041F9\\IRepository.cs",
+              "RelativeToolTip": "\u041E\u041E\u041F9\\IRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAzAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-14T22:34:37.753Z"
             }
           ]
         }
