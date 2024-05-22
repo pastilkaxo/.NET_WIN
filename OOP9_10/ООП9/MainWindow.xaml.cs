@@ -65,6 +65,7 @@ namespace ООП9
 
         private void ValidatePassNumber(object sender, TextCompositionEventArgs e)
         {
+            ClientFind.MaxHeight = 10;
             NewPassNum.MaxLength = 7;
             PassNum.MaxLength = 7;
             if (!Char.IsDigit(e.Text, 0)) e.Handled = true;
@@ -259,11 +260,19 @@ namespace ООП9
 
         private async void FindOwner_Click(object sender, RoutedEventArgs e)
         {
+            try
+            {
+                var owners = await db.Owners.Where(o => o.Name.Contains(NameFind.Text) && o.Surname.Contains(SurnameFind.Text)).ToListAsync();
+                dataView.ItemsSource = owners;
+                NameFind.Clear();
+                SurnameFind.Clear();
+            }
+            catch
+            {
+                MessageBox.Show("Неверный формат");
 
-            var owners = await db.Owners.Where(o => o.Name.Contains(NameFind.Text) && o.Surname.Contains(SurnameFind.Text)).ToListAsync();
-            dataView.ItemsSource = owners;
-            NameFind.Clear();
-            SurnameFind.Clear();
+            }
+            
         }
 
         private async void FIndCheck_Click(object sender, RoutedEventArgs e)
@@ -397,7 +406,7 @@ namespace ООП9
                         ownerToUpdate.Name = !string.IsNullOrEmpty(NewName.Text) ? NewName.Text : ownerToUpdate.Name;
                         ownerToUpdate.Surname = !string.IsNullOrEmpty(NewSurname.Text) ? NewSurname.Text : ownerToUpdate.Surname;
                         ownerToUpdate.Fathername = !string.IsNullOrEmpty(NewFathername.Text) ? NewFathername.Text : ownerToUpdate.Fathername;
-                        if (!string.IsNullOrEmpty(NewBirth.Text))
+                        if (!string.IsNullOrEmpty(NewBirth.Text) && ValidateBirthDate(NewBirth))
                         {
                             ownerToUpdate.Birth = Convert.ToDateTime(NewBirth.Text);
                         }
@@ -464,6 +473,23 @@ namespace ООП9
             catch (FormatException)
             {
                 MessageBox.Show("Неверный формат!");
+            }
+        }
+
+        private async void FindOwnerById(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                int _id = Convert.ToInt32(IdFind.Text);
+                var owners = await db.Owners.Where(o => o.ID == _id).ToListAsync();
+                dataView.ItemsSource = owners;
+                IdFind.Clear();
+            }
+            catch
+            {
+                MessageBox.Show("Неверный формат");
+                db.Owners.Load();
+                dataView.ItemsSource = db.Owners.Local.ToBindingList();
             }
         }
     }

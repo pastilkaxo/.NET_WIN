@@ -77,11 +77,11 @@
                     <TextBox x:Name="NameFind" HorizontalAlignment="Left" Margin="10,75,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="21"/>
                     <TextBox x:Name="SurnameFind" HorizontalAlignment="Left" Margin="10,127,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="26"/>
                     <Button x:Name="FindOwner" Content="Поиск" HorizontalAlignment="Left" Margin="10,167,0,0" VerticalAlignment="Top" Width="120" Height="26" Click="FindOwner_Click"/>
-                    <Label Content="Введите  номер клиента:" HorizontalAlignment="Left" Margin="636,49,0,0" VerticalAlignment="Top"/>
-                    <Label Content="Введите тип счёта:" HorizontalAlignment="Left" Margin="670,96,0,0" VerticalAlignment="Top"/>
-                    <TextBox x:Name="ClientFind" HorizontalAlignment="Left" Margin="662,77,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-                    <TextBox x:Name="TypeFind" HorizontalAlignment="Left" Margin="662,124,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-                    <Button x:Name="FIndCheck" Content="Поиск" HorizontalAlignment="Left" Margin="662,154,0,0" VerticalAlignment="Top" Width="120" Height="26" Click="FIndCheck_Click"/>
+                    <Label Content="Введите  номер клиента:" HorizontalAlignment="Left" Margin="649,44,0,0" VerticalAlignment="Top"/>
+                    <Label Content="Введите тип счёта:" HorizontalAlignment="Left" Margin="662,116,0,0" VerticalAlignment="Top"/>
+                    <TextBox x:Name="ClientFind" HorizontalAlignment="Left" Margin="662,75,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="29"/>
+                    <TextBox x:Name="TypeFind" HorizontalAlignment="Left" Margin="662,147,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                    <Button x:Name="FIndCheck" Content="Поиск" HorizontalAlignment="Left" Margin="662,174,0,0" VerticalAlignment="Top" Width="120" Height="26" Click="FIndCheck_Click"/>
                     <Button x:Name="SortCheckByNumberr" Content="НОМЕР" HorizontalAlignment="Left" Margin="557,55,0,0" VerticalAlignment="Top" Width="63" Click="SortCheckByNumber"/>
                     <Button x:Name="SortCheckByClientt" Content="КЛИЕНТ" HorizontalAlignment="Left" Margin="557,86,0,0" VerticalAlignment="Top" Width="63" Click="SortCheckByClient"/>
                     <Button x:Name="SortCheckByTypee" Content="ТИП" HorizontalAlignment="Left" Margin="557,118,0,0" VerticalAlignment="Top" Width="63" Click="SortCheckByType_Click"/>
@@ -92,6 +92,9 @@
                     <Button x:Name="SortOwnerByBirthh" Content="ДАТА РОЖДЕНИЯ" HorizontalAlignment="Left" Margin="168,114,0,0" VerticalAlignment="Top" Width="119" Click="SortOwnerByBirth"/>
                     <Button x:Name="SortOwnerByPassNumm" Content="СЕРИЯ ПАСПОРТА" HorizontalAlignment="Left" Margin="168,139,0,0" VerticalAlignment="Top" Width="119" Click="SortOwnerByPassNum"/>
                     <Button x:Name="SortOwnerByPassSerr" Content="НОМЕР ПАСПОРТА" HorizontalAlignment="Left" Margin="168,164,0,0" VerticalAlignment="Top" Width="119" Click="SortOwnerByPassSer"/>
+                    <Label Content="Введите ID владельца:" HorizontalAlignment="Left" Margin="10,198,0,0" VerticalAlignment="Top"/>
+                    <TextBox x:Name="IdFind" HorizontalAlignment="Left" Margin="10,224,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="21"/>
+                    <Button x:Name="FindOwnerSecond" Content="Поиск" HorizontalAlignment="Left" Margin="156,222,0,0" VerticalAlignment="Top" Width="120" Height="26" Click="FindOwnerById"/>
                 </Grid>
             </TabItem>
             <TabItem Header="Удаление">
